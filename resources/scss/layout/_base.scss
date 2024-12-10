@@ -1,0 +1,11 @@
+.v_wrapper {
+	position: relative;
+	min-width: 155rem;
+}
+
+#v_container {
+	>.v_inner {
+		display: flex;
+		height: 100%;
+	}
+}

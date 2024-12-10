@@ -1,0 +1,86 @@
+#v_content {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	height: calc(100vh - 8rem);
+	max-height: calc(100vh - 8rem);
+	padding: 2rem 2rem 0;
+	overflow-y: auto;
+
+	>.content_inner {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		padding: 3rem;
+		border-radius: 2rem;
+		background-color: $white;
+	}
+
+	@at-root .content_util {
+		display: flex;
+		align-items: center;
+		flex: 0 0 auto;
+		margin-bottom: 3rem;
+
+		.title_wrap {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+		}
+
+		.content_tit {
+			color: #181A1B;
+			font-size: 2.8rem;
+			line-height: 3.3rem;
+		}
+
+		.btn_favorite {
+			&.on {
+				.v_ico {
+					background-image: url(#{$url-img-common}/ico_bookmark_on.png);
+				}
+			}
+		}
+
+		.btn_sm {
+			letter-spacing: -.005em;
+		}
+	}
+
+	@at-root .v_breadcrumb {
+		margin-left: auto;
+
+		.path {
+			display: flex;
+			align-items: center;
+
+			li {
+				color: $gray;
+
+				+li {
+					&:before {
+						content: '';
+						display: inline-block;
+						width: 2rem;
+						height: 2rem;
+						vertical-align: middle;
+						background: url(#{$url-img-common}/ico_chevron_right.png) no-repeat 50% 50%;
+					}
+				}
+			}
+		}
+	}
+
+	@at-root .content_section {
+		flex: 1;
+	}
+
+	.btn_group_fixed {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		flex: 0 0 auto;
+		margin-top: 3rem;
+	}
+}

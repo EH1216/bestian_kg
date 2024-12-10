@@ -1,0 +1,94 @@
+/* 모달 팝업 */
+.modal_open {
+	overflow-y: hidden;
+}
+
+.modal_popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(#000, .75);
+
+	.popup_inner {
+		position: relative;
+		z-index: 1100;
+		width: 560px;
+		height: auto;
+		margin-top: 0;
+		padding: 40px;
+		border: 1px solid $border-color;
+		border-radius: 12px;
+		background-color: $white;
+		transition-duration: .3s;
+		transition-property: transform;
+
+		&:focus {
+			outline: 0;
+		}
+	}
+
+	&.hide {
+		display: none;
+	}
+
+	&.show {
+		display: flex;
+	}
+
+	&.modal_sm {
+		.popup_nner {
+			width: 330px;
+		}
+	}
+}
+
+.popup_header {
+	display: flex;
+	align-items: center;
+
+	.popup_tit {
+		font-weight: 700;
+		font-size: $font-size-base;
+	}
+}
+
+.popup_body {
+	display: flex;
+	flex-direction: column;
+}
+
+.popup_cont {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 32px 0;
+
+	p {
+		line-height: 1.6;
+	}
+}
+
+.popup_footer {
+	.btn_group {
+		margin-top: 0;
+
+		.right {
+			gap: 8px;
+		}
+	}
+}
+
+.popup_header~.btn_close_popup {
+	position: absolute;
+	top: 30px;
+	right: 28px;
+	width: 40px;
+	height: 40px;
+	background: url(#{$url-img-common}/ico_close.png) no-repeat 50% 50%;
+}

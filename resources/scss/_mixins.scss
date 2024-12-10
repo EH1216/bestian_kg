@@ -1,0 +1,56 @@
+@mixin clearfix {
+	&:after {
+		display: block;
+		clear: both;
+		content: '';
+	}
+}
+
+@mixin ir {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	vertical-align: middle;
+	overflow: hidden;
+
+	text-indent: -9999px;
+	overflow: hidden;
+	text-align: left;
+}
+
+@mixin ico($name, $w:25px, $h:25px, $url: #{$url-img-common}) {
+	.ico_#{$name} {
+		width: $w;
+		height: $h;
+		line-height: $h;
+		background-image: url('#{$url}/ico_#{$name}.png');
+	}
+}
+
+@mixin text_ellipsis($row:2, $line-height: 1.7rem, $height-fixed: false) {
+	@if $row>1 {
+		display: -webkit-box;
+		-webkit-line-clamp: $row;
+		-webkit-box-orient: vertical;
+		white-space: normal;
+	}
+
+	@else {
+		max-width: 100%;
+		white-space: nowrap;
+	}
+
+	@if $height-fixed {
+		height: $row * $line-height;
+		max-height: none;
+	}
+
+	@else {
+		max-height: $row * $line-height;
+	}
+
+	line-height: $line-height;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}

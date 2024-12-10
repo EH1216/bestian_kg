@@ -1,0 +1,35 @@
+/* 간격 */
+
+$dirs: (top: t, left: l, right: r, bottom: b);
+$total: 16;
+$gap: .5rem;
+
+@for $i from 0 to $total {
+	.m_#{$i} {
+		margin: $i * $gap !important;
+	}
+}
+
+@for $i from 0 to $total {
+	.p_#{$i} {
+		padding: $i * $gap !important;
+	}
+}
+
+@each $dir,
+$value in $dirs {
+	@for $i from 0 to $total {
+		.m#{$value}_#{$i} {
+			margin-#{$dir}: $i * $gap !important;
+		}
+	}
+}
+
+@each $dir,
+$value in $dirs {
+	@for $i from 0 to $total {
+		.p#{$value}_#{$i} {
+			padding-#{$dir}: $i * $gap !important;
+		}
+	}
+}

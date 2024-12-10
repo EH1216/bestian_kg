@@ -1,0 +1,38 @@
+// 크기
+.text_xs {
+	font-size: $font-size-xs !important;
+}
+
+.text_sm {
+	font-size: $font-size-sm !important;
+}
+
+.text_md {
+	font-size: $font-size-base !important;
+}
+
+.text_lg {
+	font-size: $font-size-lg !important;
+}
+
+.text_xl {
+	font-size: $font-size-xl !important;
+}
+
+// 두께
+.text_normal {
+	font-weight: 400 !important;
+}
+
+.text_medium {
+	font-weight: 500 !important;
+}
+
+.text_bold {
+	font-weight: 600 !important;
+}
+
+// 밑줄
+u {
+	text-underline-position: from-font;
+}

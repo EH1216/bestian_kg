@@ -1,0 +1,14 @@
+#v_footer {
+	flex: 0 0 4rem;
+	margin-top: 3rem;
+	border-top: 1px solid $border-color;
+	text-align: center;
+
+	.address {
+		color: $gray;
+		font-style: normal;
+		font-size: 1.5rem;
+		letter-spacing: -.03em;
+		line-height: 3.9rem;
+	}
+}

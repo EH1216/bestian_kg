@@ -1,0 +1,161 @@
+#v_sidebar {
+	flex: 0 0 auto;
+	position: relative;
+	width: 1.8rem;
+	transform: translateX(-29rem);
+	transition-duration: .3s;
+
+	.sidebar_inner {
+		display: flex;
+		flex-direction: column;
+		width: 29rem;
+		height: 100%;
+		min-height: calc(100vh - 8rem);
+		border-right: 1px solid $border-color;
+		background-color: $white;
+	}
+
+	.tab_menu {
+		margin-bottom: 0;
+	}
+
+	.sidebar_cont {
+		display: flex;
+		flex-direction: column;
+		height: calc(100vh - 12.5rem);
+		padding-bottom: 2rem;
+		max-height: calc(100vh - 12.5rem);
+		overflow-y: auto;
+	}
+
+	.lnb_area {
+		flex: 1;
+		padding-top: 1.5rem;
+		// max-height: calc(100vh - 46.5rem);
+		// overflow-y: auto;
+
+		.depth1 {
+			>li {
+				border-bottom: 1px solid #E7EBEE;
+
+				>a {
+					display: flex;
+					align-items: center;
+					padding: 1.5rem 4rem 1.5rem 1.5rem;
+					font-weight: 500;
+					font-size: 1.6rem;
+					line-height: 2.2rem;
+				}
+
+				&.collapse {
+					>a {
+						display: flex;
+						position: relative;
+
+						&:after {
+							content: '';
+							position: absolute;
+							top: calc(50% - .8rem);
+							right: 1.5rem;
+							width: 1.6rem;
+							height: 1.6rem;
+							background: url(#{$url-img-common}/ico_plus.png) no-repeat 50% 50%;
+						}
+					}
+
+					&:not(.show) {
+						display: block;
+					}
+				}
+	
+				&.on {
+					>a {
+						color: $white;
+						font-weight: 600;
+						background-color: $primary;
+
+						&:after {
+							background-image: url(#{$url-img-common}/ico_minus.png);
+						}
+					}
+	
+					.depth2 {
+						display: block;
+					}
+				}
+			}
+		}
+
+		.depth2 {
+			padding: 1rem 6.7rem 1.2rem 3rem;
+
+			li {
+				margin-top: 1.5rem;
+
+				a {
+					display: block;
+					position: relative;
+					padding-left: 1.4rem;
+					color: #525960;
+					font-size: 1.5rem;
+					letter-spacing: -.03em;
+					line-height: 1.5rem;
+					
+					&:before {
+						content: '';
+						position: absolute;
+						top: 1px;
+						left: 0;
+						width: 1.2rem;
+						height: 1.2rem;
+						background: url(#{$url-img-common}/ico_chevron_right_sm.png) no-repeat 50% 50%;
+					}
+				}
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				&.on {
+					a {
+						color: $primary;
+						font-weight: 600;
+						
+						&:before {
+							background-image: url(#{$url-img-common}/ico_chevron_right_sm_primary.png);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.shortcut_wrap {
+		display: flex;
+		flex-wrap: wrap;
+		flex: 0 0 29rem;
+		width: 100%;
+		margin-top: 1.4rem;
+		padding: 1.5rem;
+
+		.v_btn {
+			flex: 0 0 calc(50% - 1rem);
+			height: 12rem;
+			margin: .5rem;
+			border-radius: .6rem;
+			background-color: #F9FAFB;
+		}		
+	}
+
+	.btn_sidebar {
+		position: absolute;
+		top: calc(50vh - 12.3rem);
+		left: 29rem;
+		width: 1.8rem;
+	}
+
+	&.open {
+		width: 29rem;
+		transform: translateX(0);
+	}
+}

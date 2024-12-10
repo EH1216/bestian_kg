@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+//
+// 공통 컴포넌트
+//
+
+// variables
+@import "variables";
+
+// funtions
+@import "mixins";
+
+// global
+@import "fonts";
+@import "default";
+
+// utilities
+@import "utilities/spacing";
+@import "utilities/align";
+@import "utilities/typo";
+
+// components
+@import "components/icons";
+@import "components/bullets";
+@import "components/buttons";
+@import "components/forms";
+@import "components/boxs";
+@import "components/tabmenus";
+@import "components/popups";
+@import "components/tables";
+
+// pages
+@import "pages/guidePages"; // UI 컴포넌트 가이드

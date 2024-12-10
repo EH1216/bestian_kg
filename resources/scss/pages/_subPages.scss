@@ -1,0 +1,54 @@
+/* 서브 */
+
+// 상세
+.file_list {
+	li {
+		display: flex;
+		align-items: center;
+		gap: .5rem;
+
+		+li {
+			margin-top: .5rem;
+		}
+	}
+
+	.file_wrap {
+		display: flex;
+		gap: .4rem;
+	}
+}
+
+.accordion_wrap {
+	.accordion_item {
+		position: relative;
+		padding-right: 3.4rem;
+
+		&:not(.open) {
+			.accordion_cont {
+				@include text_ellipsis(1, 2.4rem);
+			}
+		}
+
+		&.open {
+			.btn_accordion {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	.btn_accordion {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+.overlap_wrap {
+	position: relative;
+
+	.v_btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}

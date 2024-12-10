@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* 웹폰트 */
+
+$url-fonts: "../fonts";
+
+$font-weights: ( 
+	Regular: 400,
+	Medium: 500,
+	SemiBold: 600,
+	Bold: 700,
+);
+
+$font-family: "Pretendard";
+$font-file-name: "Pretendard";
+
+@each $weight-name,
+$weight-size in $font-weights {
+	@font-face {
+		font-family: $font-family;
+		font-style: normal;
+		font-weight: $weight-size;
+		src: url("#{$url-fonts}/#{$font-file-name}-#{$weight-name}.woff2") format('woff'),
+		url("#{$url-fonts}/#{$font-file-name}-#{$weight-name}.woff") format('woff');
+	}
+}

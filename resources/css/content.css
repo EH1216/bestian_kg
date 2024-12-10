@@ -1,0 +1,96 @@
+@charset "UTF-8";
+.text_default {
+  color: #3B4044 !important;
+}
+
+.text_white {
+  color: #fff !important;
+}
+
+.text_primary {
+  color: #0094D3 !important;
+}
+
+.text_secondary {
+  color: #5B74CF !important;
+}
+
+.text_neutral {
+  color: #F3F5F6 !important;
+}
+
+.text_green {
+  color: #00AA02 !important;
+}
+
+.text_orange {
+  color: #F86800 !important;
+}
+
+.text_red {
+  color: #E22A21 !important;
+}
+
+.text_blue {
+  color: #3A88FF !important;
+}
+
+.text_gray {
+  color: #66707A !important;
+}
+
+.text_invalid {
+  color: #E22A21 !important;
+}
+
+/* 메인 */
+/* 서브 */
+.file_list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+.file_list li + li {
+  margin-top: 0.5rem;
+}
+.file_list .file_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.accordion_wrap .accordion_item {
+  position: relative;
+  padding-right: 3.4rem;
+}
+.accordion_wrap .accordion_item:not(.open) .accordion_cont {
+  max-width: 100%;
+  white-space: nowrap;
+  max-height: 2.4rem;
+  line-height: 2.4rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.accordion_wrap .accordion_item.open .btn_accordion {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.accordion_wrap .btn_accordion {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.overlap_wrap {
+  position: relative;
+}
+.overlap_wrap .v_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

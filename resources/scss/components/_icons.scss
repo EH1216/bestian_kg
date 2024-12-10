@@ -1,0 +1,29 @@
+//
+// Icons
+// 
+
+.v_ico {
+	@include ir;
+}
+
+/* 컨텐츠 아이콘 */
+@include ico('search', 2.4rem, 2.4rem);
+@include ico('search_white', 2.4rem, 2.4rem);
+@include ico('search_white_sm', 1.8rem, 1.8rem);
+@include ico('alarm', 2.4rem, 2.4rem);
+@include ico('logout', 2.4rem, 2.4rem);
+@include ico('home', 2rem, 2rem);
+@include ico('bookmark', 3.2rem, 3.2rem);
+@include ico('sidebar', 1.8rem, 7.8rem);
+@include ico('close_white', 4rem, 4rem);
+@include ico('delete', 2.4rem, 2.5rem);
+@include ico('shortcut1', 5.6rem, 5.6rem);
+@include ico('shortcut2', 5.6rem, 5.6rem);
+@include ico('shortcut3', 5.6rem, 5.6rem);
+@include ico('shortcut4', 5.6rem, 5.6rem);
+@include ico('paging_first', 3.2rem, 3.2rem);
+@include ico('paging_prev', 3.2rem, 3.2rem);
+@include ico('paging_next', 3.2rem, 3.2rem);
+@include ico('paging_last', 3.2rem, 3.2rem);
+@include ico('chevron_down_gray', 2.4rem, 2.4rem);
+@include ico('trashcan', 2.4rem, 2.4rem);
