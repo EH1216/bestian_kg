@@ -6,10 +6,13 @@
 	>.v_inner {
 		display: flex;
 		justify-content: space-between;
+		gap: 2rem;
 		padding: 2rem 4rem 2rem 3rem;
 	}
 
 	@at-root #v_logo {
+		flex: 0 0 auto;
+
 		a {
 			display: flex;
 			align-items: center;
@@ -25,6 +28,7 @@
 
 	.search_form {
 		position: relative;
+		height: 4rem;
 
 		.form_control {
 			width: 46rem;
@@ -61,6 +65,7 @@
 		gap: .5rem;
 
 		.user_pic {
+			flex: 0 0 auto;
 			width: 3.6rem;
 			height: 3.6rem;
 			border-radius: 50%;

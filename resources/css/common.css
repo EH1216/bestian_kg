@@ -1,48 +1,4 @@
 @charset "UTF-8";
-.text_default {
-  color: #3B4044 !important;
-}
-
-.text_white {
-  color: #fff !important;
-}
-
-.text_primary {
-  color: #0094D3 !important;
-}
-
-.text_secondary {
-  color: #5B74CF !important;
-}
-
-.text_neutral {
-  color: #F3F5F6 !important;
-}
-
-.text_green {
-  color: #00AA02 !important;
-}
-
-.text_orange {
-  color: #F86800 !important;
-}
-
-.text_red {
-  color: #E22A21 !important;
-}
-
-.text_blue {
-  color: #3A88FF !important;
-}
-
-.text_gray {
-  color: #66707A !important;
-}
-
-.text_invalid {
-  color: #E22A21 !important;
-}
-
 /* 웹폰트 */
 @font-face {
   font-family: "Pretendard";
@@ -980,6 +936,50 @@ u {
   text-underline-position: from-font;
 }
 
+.text_default {
+  color: #3B4044 !important;
+}
+
+.text_white {
+  color: #fff !important;
+}
+
+.text_primary {
+  color: #0094D3 !important;
+}
+
+.text_secondary {
+  color: #5B74CF !important;
+}
+
+.text_neutral {
+  color: #F3F5F6 !important;
+}
+
+.text_green {
+  color: #00AA02 !important;
+}
+
+.text_orange {
+  color: #F86800 !important;
+}
+
+.text_red {
+  color: #E22A21 !important;
+}
+
+.text_blue {
+  color: #3A88FF !important;
+}
+
+.text_gray {
+  color: #66707A !important;
+}
+
+.text_invalid {
+  color: #E22A21 !important;
+}
+
 .v_ico {
   display: inline-block;
   background-repeat: no-repeat;
@@ -1453,6 +1453,12 @@ p.v_list1:before {
 .form_control.inline {
   width: auto !important;
 }
+.form_control.is_invalid {
+  border-color: #E22A21;
+}
+.form_control.is_invalid:focus {
+  outline-color: #E22A21;
+}
 .form_control:focus {
   position: relative;
   outline: 1px solid #0094D3;
@@ -1483,14 +1489,15 @@ p.v_list1:before {
 .form_control[readonly]::-ms-value {
   color: #66707A !important;
 }
-.form_control.form_datepicker {
-  padding-right: 40px;
-  background: #fff url(../images/common/ico_calendar.png) no-repeat right 15px center;
+
+input[type=text]:not(.form_datepicker).is_invalid,
+input[type=password].is_invalid {
+  background: url(../images/common/ico_invalid.png) no-repeat right 10px center;
 }
 
 input[type=date] {
   position: relative;
-  background: #fff url(../images/common/ico_calendar.png) no-repeat right 15px center;
+  background: #fff url(../images/common/ico_calendar.png) no-repeat right 1.5rem center;
 }
 input[type=date]::-webkit-calendar-picker-indicator {
   position: absolute;
@@ -1500,6 +1507,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   height: 100%;
   color: transparent;
   background: transparent;
+}
+
+.form_datepicker {
+  padding-right: 4rem;
+  background: #fff url(../images/common/ico_calendar.png) no-repeat right 1.5rem center;
 }
 
 select.form_control {
@@ -1522,6 +1534,14 @@ textarea.form_control {
   overflow: auto;
   line-height: inherit;
   resize: none;
+}
+
+.text_invalid {
+  margin: 0.5rem 0 0 0.5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  letter-spacing: -0.005em;
 }
 
 .check_area {
@@ -1736,29 +1756,6 @@ textarea.form_control {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-.form_col > .input_item.invalid .form_control {
-  outline: 1px solid #E22A21;
-  outline-offset: -1px;
-}
-.form_col > .input_item.invalid .text_invalid {
-  display: block;
-  position: relative;
-  margin-top: 12px;
-  padding-left: 24px;
-  font-size: 15px;
-}
-.form_col > .input_item.invalid .text_invalid:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  background: url(../images/common/ico_invalid.png) no-repeat 50% 50%;
-}
-.form_col > .input_item .text_invalid {
-  display: none;
 }
 .form_col > .input_item > .form_label {
   margin-bottom: 8px;

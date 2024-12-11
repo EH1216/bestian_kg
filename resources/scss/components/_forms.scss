@@ -32,6 +32,14 @@
 		width: auto !important;
 	}
 
+	&.is_invalid {
+		border-color: $invalid;
+
+		&:focus {
+			outline-color: $invalid;
+		}
+	}
+
 	&:focus {
 		position: relative;
 		outline: 1px solid $primary;
@@ -68,16 +76,18 @@
 			color: #66707A !important;
 		}
 	}
+}
 
-	&.form_datepicker {
-		padding-right: 40px;
-		background: $white url(#{$url-img-common}/ico_calendar.png) no-repeat right 15px center;
+input[type=text]:not(.form_datepicker),
+input[type=password] {
+	&.is_invalid {
+		background: url(#{$url-img-common}/ico_invalid.png) no-repeat right 10px center;
 	}
 }
 
 input[type=date] {
 	position: relative;
-	background: $white url(#{$url-img-common}/ico_calendar.png) no-repeat right 15px center;
+	background: $white url(#{$url-img-common}/ico_calendar.png) no-repeat right 1.5rem center;
 
 	&::-webkit-calendar-picker-indicator {
 		position: absolute;
@@ -88,6 +98,11 @@ input[type=date] {
 		color: transparent;
 		background: transparent;
 	}
+}
+
+.form_datepicker {
+	padding-right: 4rem;
+	background: $white url(#{$url-img-common}/ico_calendar.png) no-repeat right 1.5rem center;
 }
 
 select.form_control {
@@ -112,6 +127,14 @@ textarea.form_control {
 	overflow: auto;
 	line-height: inherit;
 	resize: none;
+}
+
+.text_invalid {
+	margin: .5rem 0 0 .5rem;
+	font-weight: 600;
+	font-size: 1.2rem;
+	line-height: 1.4rem;
+	letter-spacing: -.005em;
 }
 
 .check_area {
@@ -338,35 +361,6 @@ textarea.form_control {
 	>.input_item {
 		display: flex;
 		flex-direction: column;
-
-		&.invalid {
-			.form_control {
-				outline: 1px solid $invalid;
-				outline-offset: -1px;
-			}
-
-			.text_invalid {
-				display: block;
-				position: relative;
-				margin-top: 12px;
-				padding-left: 24px;
-				font-size: 15px;
-
-				&:before {
-					content: '';
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 20px;
-					height: 20px;
-					background: url(#{$url-img-common}/ico_invalid.png) no-repeat 50% 50%;
-				}
-			}
-		}
-
-		.text_invalid {
-			display: none;
-		}
 
 		>.form_label {
 			margin-bottom: 8px;
