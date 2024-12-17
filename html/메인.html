@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>키르키스탄 의안문서관리시스템</title>
+	<link rel="stylesheet" href="../resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script src="../resources/js/swiper.min.js"></script>
+	<script src="../resources/js/ui-common.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		// 메인 슬라이더
+		$(document).ready(function () {
+			var swiper = new Swiper('.news_slider', {
+				slidesPerView: 4,
+				spaceBetween: 20,
+				navigation: {
+					prevEl: '.btn_slider_prev',
+					nextEl: '.btn_slider_next',
+				},
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="v_wrapper main_wrapper"><!-- 메인 화면 클래스 .main_wrapper 추가 -->
+		<header id="v_header">
+			<div class="v_inner">
+				<h1 id="v_logo">
+					<a href="javascript:void(0)">
+						<img src="../resources/images/common/logo.png" alt="">
+						<span class="text">Жогорку Кенеш<br> Кыргызской Республики</span>
+					</a>
+				</h1>
+				<div class="search_form">
+					<input type="text" class="form_control" placeholder="Search">
+					<button type="button" class="btn_search"><i class="v_ico ico_search"></i></button>
+				</div>
+				<div class="util_group">
+					<div class="util_item util_user">
+						<span class="user_pic">
+							<img src="../resources/images/content/img_picture.png" alt="">
+						</span>
+						<span class="user_name">Председатель Кабинета Министров</span>
+					</div>
+					<div class="util_item util_lang">
+						<button type="button" class="v_btn active">KblP</button>
+						<button type="button" class="v_btn">PYC</button>
+					</div>
+					<div class="util_item util_ctrl">
+						<button type="button" class="v_btn active"><i class="v_ico ico_alarm"></i></button>
+						<button type="button" class="v_btn"><i class="v_ico ico_logout"></i></button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="v_container">
+			<div class="v_inner">
+				<div id="v_sidebar" class="open">
+					<div class="sidebar_inner">
+						<nav class="tab_menu">
+							<ul class="tab_list">
+								<li class="on"><a href="javascript:void(0)">баары</a></li>
+								<li><a href="javascript:void(0)">парламент</a></li>
+							</ul>
+						</nav>
+						<div class="sidebar_cont">
+							<div class="lnb_area">
+								<ul class="depth1">
+									<li class="collapse"><a href="javascript:void(0)">Подача законопроекта</a>
+										<ul class="depth2">
+											<li><a href="javascript:void(0)">Повестка дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на повестку дня</a></li>
+											<li><a href="javascript:void(0)">Подача заявления об отмене повестки дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на отмену повестки дня</a></li>
+										</ul>
+									</li>
+									<li class="collapse"><a href="javascript:void(0)">Утверждение законопроекта</a>
+										<ul class="depth2">
+											<li><a href="javascript:void(0)">Повестка дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на повестку дня</a></li>
+											<li><a href="javascript:void(0)">Подача заявления об отмене повестки дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на отмену повестки дня</a></li>
+										</ul>
+									</li>
+									<li class="collapse"><a href="javascript:void(0)">ЗаконопроектРассмотрение</a>
+										<ul class="depth2">
+											<li><a href="javascript:void(0)">Повестка дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на повестку дня</a></li>
+											<li><a href="javascript:void(0)">Подача заявления об отмене повестки дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на отмену повестки дня</a></li>
+										</ul>
+									</li>
+									<li class="collapse"><a href="javascript:void(0)">КомитетЗаседание</a>
+										<ul class="depth2">
+											<li><a href="javascript:void(0)">Повестка дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на повестку дня</a></li>
+											<li><a href="javascript:void(0)">Подача заявления об отмене повестки дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на отмену повестки дня</a></li>
+										</ul>
+									</li>
+									<li class="collapse"><a href="javascript:void(0)">ЗаконопроектСостояние</a>
+										<ul class="depth2">
+											<li><a href="javascript:void(0)">Повестка дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на повестку дня</a></li>
+											<li><a href="javascript:void(0)">Подача заявления об отмене повестки дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на отмену повестки дня</a></li>
+										</ul>
+									</li>
+									<li class="collapse"><a href="javascript:void(0)">Поиск</a>
+										<ul class="depth2">
+											<li><a href="javascript:void(0)">Повестка дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на повестку дня</a></li>
+											<li><a href="javascript:void(0)">Подача заявления об отмене повестки дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на отмену повестки дня</a></li>
+										</ul>
+									</li>
+									<li class="collapse"><a href="javascript:void(0)">ДокументУправление</a>
+										<ul class="depth2">
+											<li><a href="javascript:void(0)">Повестка дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на повестку дня</a></li>
+											<li><a href="javascript:void(0)">Подача заявления об отмене повестки дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на отмену повестки дня</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="shortcut_wrap">
+								<a href="javascript:void(0)" class="v_btn"><i class="v_ico ico_shortcut1"></i></a>
+								<a href="javascript:void(0)" class="v_btn"><i class="v_ico ico_shortcut2"></i></a>
+								<a href="javascript:void(0)" class="v_btn"><i class="v_ico ico_shortcut3"></i></a>
+								<a href="javascript:void(0)" class="v_btn"><i class="v_ico ico_shortcut4"></i></a>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn_sidebar"><i class="v_ico ico_sidebar"></i></button>
+				</div>
+				
+				<div id="v_content">
+					<div class="content_inner">
+						<div class="process_section">
+							<ol class="process_list">
+								<li>
+									<strong class="process_tit">мыйзам долбоор каттоо</strong>
+									<span class="process_num">3</span>
+								</li>
+								<li>
+									<strong class="process_tit">кароого жөнөтүү</strong>
+									<span class="process_num">7</span>
+								</li>
+								<li class="active">
+									<strong class="process_tit">комитетте кароо</strong>
+									<span class="process_num">8</span>
+								</li>
+								<li>
+									<strong class="process_tit">ЖКде кароо</strong>
+									<span class="process_num">9</span>
+								</li>
+								<li>
+									<strong class="process_tit">президентке жөнөтүү</strong>
+									<span class="process_num">8</span>
+								</li>
+								<li>
+									<strong class="process_tit">кабыл алуу</strong>
+									<span class="process_num">7</span>
+								</li>
+							</ol>
+						</div>
+						<div class="schedule_section">
+							<div class="left">
+								<div class="calendar_wrap type2">
+									<div class="calendar_head">
+										<button type="button" class="v_btn"><i class="v_ico ico_chevron_left_lg"></i></button>
+										<span class="calendar_tit">October, 2024</span>
+										<button type="button" class="v_btn"><i class="v_ico ico_chevron_right_lg"></i></button>
+									</div>
+									<div class="calendar_body">
+										<div class="calendar_week">
+											<div>SUN</div>
+											<div>MON</div>
+											<div>TUE</div>
+											<div>WED</div>
+											<div>WED</div>
+											<div>FRI</div>
+											<div>SAT</div>
+										</div>
+										<div class="calendar_days">
+											<div>
+												<button type="button" class="day">1</button>
+											</div>
+											<div>
+												<button type="button" class="day">2</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type1">п</span>
+													<span class="v_badge badge_square type2">к</span>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="day">3</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type4">с</span>
+													<span class="v_badge badge_square type5">и</span>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="day">4</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type5">и</span>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="day">5</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type1">п</span>
+													<span class="v_badge badge_square type2">к</span>
+													<span class="v_badge badge_square type4">с</span>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="day">6</button>
+											</div>
+											<div>
+												<button type="button" class="day">7</button>
+											</div>
+											<div>
+												<button type="button" class="day">8</button>
+											</div>
+											<div>
+												<button type="button" class="day">9</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type4">с</span>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="day">10</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type1">п</span>
+													<span class="v_badge badge_square type5">и</span>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="day">11</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type4">с</span>
+													<span class="v_badge badge_square type5">и</span>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="day">12</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type2">к</span>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="day">13</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type1">п</span>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="day">14</button>
+											</div>
+											<div>
+												<button type="button" class="day">15</button>
+											</div>
+											<div>
+												<button type="button" class="day">16</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type2">к</span>
+													<span class="v_badge badge_square type4">с</span>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="day">17</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type5">и</span>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="day">18</button>
+											</div>
+											<div>
+												<button type="button" class="day">19</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type1">п</span>
+													<span class="v_badge badge_square type5">и</span>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="day">20</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type3">т</span>
+													<span class="v_badge badge_square type5">и</span>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="day">21</button>
+											</div>
+											<div>
+												<button type="button" class="day">22</button>
+											</div>
+											<div>
+												<button type="button" class="day">23</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type3">т</span>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="day">24</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type4">с</span>
+													<span class="v_badge badge_square type5">и</span>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="day">25</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type1">п</span>
+													<span class="v_badge badge_square type3">т</span>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="day">26</button>
+											</div>
+											<div>
+												<button type="button" class="day">27</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type5">и</span>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="day">28</button>
+											</div>
+											<div>
+												<button type="button" class="day">29</button>
+											</div>
+											<div>
+												<button type="button" class="day">30</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type1">п</span>
+												</div>
+											</div>
+											<div>
+												<button type="button" class="day">31</button>
+												<div class="badge_wrap">
+													<span class="v_badge badge_square type2">к</span>
+													<span class="v_badge badge_square type3">т</span>
+												</div>
+											</div>
+											<div class="past">
+												<span class="day">1</span>
+											</div>
+											<div class="past">
+												<span class="day">2</span>
+											</div>
+											<div class="past">
+												<span class="day">3</span>
+											</div>
+											<div class="past">
+												<span class="day">4</span>
+											</div>
+										</div>
+									</div>
+									<div class="calendar_info">
+										<div class="info_item">
+											<span class="v_badge badge_square type1">п</span>
+											<span>парламент</span>
+										</div>
+										<div class="info_item">
+											<span class="v_badge badge_square type2">к</span>
+											<span>комитет</span>
+										</div>
+										<div class="info_item">
+											<span class="v_badge badge_square type3">т</span>
+											<span>төрага</span>
+										</div>
+										<div class="info_item">
+											<span class="v_badge badge_square type4">с</span>
+											<span>семинар</span>
+										</div>
+										<div class="info_item">
+											<span class="v_badge badge_square type5">и</span>
+											<span>иш-чаралар</span>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="right">
+								<nav class="tab_menu mb_2">
+									<ul class="tab_list">
+										<li class="on"><a href="javascript:void(0)">баары</a></li>
+										<li><a href="javascript:void(0)">парламент</a></li>
+										<li><a href="javascript:void(0)">комитет</a></li>
+										<li><a href="javascript:void(0)">төрага</a></li>
+										<li><a href="javascript:void(0)">семинар</a></li>
+										<li><a href="javascript:void(0)">иш-чаралар</a></li>
+									</ul>
+								</nav>
+								<div class="v_table table_list fixed_header no_clickable">
+									<table>
+										<colgroup>
+											<col span="2" style="width: 40.5%;">
+											<col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">комитет</th>
+												<th scope="col">аталыш</th>
+												<th scope="col">дата</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text_left">социалдык саясат боюнча комитет</td>
+												<td class="text_left">409-ЖК жыйындын отуруму</td>
+												<td>2023-10-18 10:00</td>
+											</tr>
+											<tr>
+												<td class="text_left">улуттук коргоо комитет</td>
+												<td class="text_left">409-ЖК айыл чарба иштери боюнча мыйзам карап чыгуу</td>
+												<td>2023-10-18 10:00</td>
+											</tr>
+											<tr>
+												<td class="text_left">айыл чарба боюнча маалымат коммите</td>
+												<td class="text_left">409-ЖК жыйындын отуруму</td>
+												<td>2023-10-18 10:00</td>
+											</tr>
+											<tr>
+												<td class="text_left">айыл чарба боюнча маалымат коммите</td>
+												<td class="text_left">409-ЖК жыйындын отуруму</td>
+												<td>2023-10-18 10:00</td>
+											</tr>
+											<tr>
+												<td class="text_left">маалымат боюнча комитет</td>
+												<td class="text_left">409-ЖК пленардык жыйыны</td>
+												<td>2023-10-18 10:00</td>
+											</tr>
+											<tr>
+												<td class="text_left">маалымат боюнча комитет</td>
+												<td class="text_left">409-ЖК жыйындын отуруму 409-ЖК пленардык жыйыны</td>
+												<td>2023-10-18 10:00</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="news_section">
+							<div class="news_head">
+								<div class="left">
+									<span class="v_tit">Новости</span>
+								</div>
+								<div class="right">
+									<div class="news_ctrl">
+										<div class="btn_wrap">
+											<a href="javascript:void(0)" class="v_btn on">Замечания</a>
+											<a href="javascript:void(0)" class="v_btn">Новости мероприятия</a>
+										</div>
+										<div class="slider_nav">
+											<button type="button" class="v_btn btn_slider_prev"><i class="v_ico ico_arr_left"></i></button>
+											<button type="button" class="v_btn btn_slider_next"><i class="v_ico ico_arr_right"></i></button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="news_cont">
+								<div class="swiper news_slider">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<a href="javascript:void(0)" class="news_item">
+												<span class="news_badge"><span>Замечание</span></span>
+												<strong class="news_tit">План работы молодежных парламентских классов на 2023 год</strong>
+												<span class="news_date">2023-10-16~2023-11-20</span>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="javascript:void(0)" class="news_item">
+												<span class="news_badge"><span>Замечание</span></span>
+												<strong class="news_tit">План работы молодежных парламентских классов на 2023 год</strong>
+												<span class="news_date">2023-10-16~2023-11-20</span>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="javascript:void(0)" class="news_item">
+												<span class="news_badge"><span>Замечание</span></span>
+												<strong class="news_tit">План работы молодежных парламентских классов на 2023 год</strong>
+												<span class="news_date">2023-10-16~2023-11-20</span>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="javascript:void(0)" class="news_item">
+												<span class="news_badge"><span>Замечание</span></span>
+												<strong class="news_tit">План работы молодежных парламентских классов на 2023 год</strong>
+												<span class="news_date">2023-10-16~2023-11-20</span>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="javascript:void(0)" class="news_item">
+												<span class="news_badge"><span>Замечание</span></span>
+												<strong class="news_tit">План работы молодежных парламентских классов на 2023 год</strong>
+												<span class="news_date">2023-10-16~2023-11-20</span>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="javascript:void(0)" class="news_item">
+												<span class="news_badge"><span>Замечание</span></span>
+												<strong class="news_tit">План работы молодежных парламентских классов на 2023 год</strong>
+												<span class="news_date">2023-10-16~2023-11-20</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<footer id="v_footer">
+						<address class="address">2024 © Кыргыз Республикасынын Жогорку Кеңеши. Бардык укуктар корголгон</address>
+					</footer>
+				</div>
+			</div>
+		</div>
+
+		<div id="v_quickmenu" class="close">
+			<button type="button" class="btn_quickmenu">Quick</button>
+			<div class="quick_wrap">
+				<div class="quick_header">
+					<span class="quick_tit">메뉴 바로가기</span>
+					<button type="button" class="btn_quick_close"><i class="v_ico ico_close_white"></i></button>
+				</div>
+				<div class="link_wrap">
+					<div class="link_item">
+						<a href="javascript:void(0)">Список законопроектовСписок законопроектов</a>
+						<button type="button" class="v_btn btn_delete"><i class="v_ico ico_delete"></i></button>
+					</div>
+					<div class="link_item">
+						<a href="javascript:void(0)">통합검색</a>
+						<button type="button" class="v_btn btn_delete"><i class="v_ico ico_delete"></i></button>
+					</div>
+					<div class="link_item">
+						<a href="javascript:void(0)">공지사항</a>
+						<button type="button" class="v_btn btn_delete"><i class="v_ico ico_delete"></i></button>
+					</div>
+					<div class="link_item">
+						<a href="javascript:void(0)">자료실</a>
+						<button type="button" class="v_btn btn_delete"><i class="v_ico ico_delete"></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

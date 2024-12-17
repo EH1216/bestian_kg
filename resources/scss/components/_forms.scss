@@ -141,6 +141,41 @@ textarea.form_control {
 	display: flex;
 	flex-wrap: wrap;
 	gap: .5rem 2.2rem;
+
+	&.type2 {
+		flex-wrap: nowrap;
+		gap: 0;
+
+		.check_item {
+			input:checked {
+				+label {
+					position: relative;
+					z-index: 1;
+				}
+			}
+
+			&:first-child {
+				input {
+					+label {
+						border-radius: .2rem 0 0 .2rem;
+					}
+				}
+				
+			}
+
+			&:last-child {
+				input {
+					+label {
+						border-radius: 0 .2rem .2rem 0;
+					}
+				}
+			}
+
+			+.check_item {
+				margin-left: -.1rem;
+			}
+		}
+	}
 }
 
 .check_item {
@@ -169,8 +204,7 @@ textarea.form_control {
 					border: .2rem solid #A8B3BD;
 					vertical-align: middle;
 					border-radius: .4rem;
-					margin: -.3rem .5rem 0 0;
-					background-color: $white;
+					margin: -.2rem .5rem 0 0;
 					cursor: pointer;
 
 					transition-duration: .2s;
@@ -237,19 +271,48 @@ textarea.form_control {
 	}
 }
 
+.check_item_custom {
+	input[type=radio],
+	input[type=checkbox] {
+		+label {
+			display: inline-flex;
+			align-items: center;
+			position: relative;
+			height: 3.6rem;
+			padding: 0 2rem;
+			border: 1px solid #E2E2E2;
+			border-radius: 0;
+			color: #121212;
+			background-color: $white;
+			cursor: pointer;
+
+			&:before {
+				display: none;
+			}
+		}
+
+		&:checked {
+			+label {
+				border-color: $primary;
+				color: $primary;
+				text-shadow: 0 0 .07rem $primary;
+			}
+		}
+	}
+}
+
 .check_item_switch {
 	display: inline-flex;
 	align-items: center;
-	gap: 8px;
 
 	input[type=radio],
 	input[type=checkbox] {
 		+label {
 			display: inline-flex;
-			width: 32px;
-			height: 20px;
-			border-radius: 40px;
-			background-color: #B4C4D6;
+			width: 4.4rem;
+			height: 2.4rem;
+			border-radius: 1.6rem;
+			background-color: #A8B3BD;
 			transition: background-color .2s ease;
 
 
@@ -262,8 +325,8 @@ textarea.form_control {
 				position: absolute;
 				top: 2px;
 				left: 2px;
-				width: 16px;
-				height: 16px;
+				width: 2rem;
+				height: 2rem;
 				border-radius: 50%;
 				background-color: $white;
 				transition: .2s ease;
@@ -275,7 +338,7 @@ textarea.form_control {
 				background-color: $primary;
 
 				&:after {
-					left: calc(100% - 2px);
+					left: calc(100% - .2rem);
 					transform: translateX(-100%);
 				}
 			}
@@ -301,30 +364,34 @@ textarea.form_control {
 
 	.input_addon {
 		padding-left: 1rem;
+
+		.v_btn {
+			+.v_btn {
+				margin-left: 1rem;
+			}
+		}
 	}
 }
 
 .form_row {
 	display: flex;
 	align-items: center;
-	gap: 3rem;
 
 	>.input_item {
 		display: flex;
 		align-items: center;
 		flex: 1;
-		max-width: calc(50% - 1.5rem);
+		max-width: 50%;
 
 		>.form_label {
 			flex: 0 0 auto;
-			width: 15rem;
 			max-width: 15rem;
 			margin-right: 1.9rem;
 			font-weight: 500;
 		}
 
 		>.form_control {
-			width: calc(100% - 15rem);
+			width: 100%;
 
 			+.form_control {
 				margin-left: 1.2rem;
@@ -332,7 +399,7 @@ textarea.form_control {
 		}
 
 		>.input_group {
-			width: calc(100% - 15rem);
+			width: 100%;
 
 			.form_control {
 				width: 100%;
@@ -344,7 +411,7 @@ textarea.form_control {
 		}
 
 		>.check_area {
-			width: calc(100% - 15rem);
+			width: 100%;
 		}
 	}
 
@@ -356,14 +423,18 @@ textarea.form_control {
 .form_col {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 1rem;
 
 	>.input_item {
 		display: flex;
 		flex-direction: column;
 
 		>.form_label {
-			margin-bottom: 8px;
+			margin-bottom: .5rem;
+		}
+
+		.file_attatch {
+			width: 100%;
 		}
 	}
 
@@ -388,6 +459,115 @@ textarea.form_control {
 			}
 		}
 	}
+
+	&.type3,
+	&.type4 {
+		>.input_item {
+			align-items: center;
+			flex-direction: row;
+			min-height: 2.4rem;
+
+			>.form_label {
+				flex: 0 0 auto;
+				margin-right: 3rem;
+				margin-bottom: 0;
+				color: #181A1B;
+				font-weight: 500;
+			}
+		}
+
+		.file_attatch {
+			.input_group {
+				.file_name {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&.type4 {
+		>.input_item {
+			>.form_label {
+				width: 12rem;
+				margin-right: 1rem;
+				color: $default;
+			}
+
+			>.form_control,
+			>.input_group,
+			>.check_area {
+				flex: 1;
+			}
+
+			>.input_group {
+				.form_control {
+					flex: 1;
+				}
+			}
+		}
+	}
+}
+
+.col {
+	&_1 {
+		flex: 0 0 8.333333% !important;
+		max-width: 8.333333% !important;
+	}
+
+	&_2 {
+		flex: 0 0 16.666667% !important;
+		max-width: 16.666667% !important;
+	}
+
+	&_3 {
+		flex: 0 0 25% !important;
+		max-width: 25% !important;
+	}
+
+	&_4 {
+		flex: 0 0 33.333333% !important;
+		max-width: 33.333333% !important;
+	}
+
+	&_5 {
+		flex: 0 0 41.666667% !important;
+		max-width: 41.666667% !important;
+	}
+
+	&_6 {
+		flex: 0 0 50% !important;
+		max-width: 50% !important;
+	}
+
+	&_7 {
+		flex: 0 0 58.333333% !important;
+		max-width: 58.333333% !important;
+	}
+
+	&_8 {
+		flex: 0 0 66.666667% !important;
+		max-width: 66.666667% !important;
+	}
+
+	&_9 {
+		flex: 0 0 75% !important;
+		max-width: 75% !important;
+	}
+
+	&_10 {
+		flex: 0 0 83.333333% !important;
+		max-width: 83.333333% !important;
+	}
+
+	&_11 {
+		flex: 0 0 91.666667% !important;
+		max-width: 91.666667% !important;
+	}
+
+	&_12 {
+		flex: 0 0 100% !important;
+		max-width: 100% !important;
+	}
 }
 
 // 게시판 검색
@@ -401,8 +581,13 @@ textarea.form_control {
 
 	.search_inner {
 		flex: 1;
-		padding-right: 3rem;
 		border-right: 1px solid #A4E1FB;
+	}
+
+	.form_row {
+		>.input_item {
+			padding-right: 3rem;
+		}
 	}
 
 	.form_control {
@@ -410,13 +595,31 @@ textarea.form_control {
 	}
 
 	.search_btn {
+		display: flex;
 		flex: 0 0 auto;
+		gap: 1rem;
 		height: 100%;
 		padding-left: 3rem;
 	}
 
 	.btn_search {
 		color: $white;
+	}
+
+	&.type2 {
+		.form_row {
+			>.input_item {
+				>.form_label {
+					width: 15rem;
+				}
+		
+				>.form_control,
+				>.input_group,
+				>.check_area {
+					width: calc(100% - 15rem);
+				}
+			}
+		}
 	}
 }
 
@@ -472,6 +675,18 @@ textarea.form_control {
 			}
 		}
 	}
+
+	&.type2 {
+		align-items: flex-end;
+
+		.total_num {
+			line-height: initial;
+		}
+
+		.btn_wrap {
+			gap: .5rem;
+		}
+	}
 }
 
 // 파일 첨부
@@ -486,11 +701,12 @@ textarea.form_control {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 2px;
+	gap: .2rem;
 	margin-top: 2rem;
 
 	.form_control {
-		width: 86px;
+		width: 8.6rem;
+		height: 3.2rem;
 		color: #A8B3BD;
 		background-image: url(#{$url-img-common}/ico_chevron_down_sm.png);
 	}

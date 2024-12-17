@@ -1,25 +1,12 @@
 /* 박스 */
 
 .v_box {
-	padding: 32px 40px;
+	padding: 2rem;
 	border: 1px solid $border-color;
-	border-radius: 12px;
-	font-size: $font-size-lg;
-	background-color: $gray;
+	border-radius: 2rem;
 
-	&_primary {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		min-height: 65px;
-		padding: 10px 24px;
-		border-radius: 8px;
-		background-color: $primary;
-	}
-
-	&_gray {
-		padding: 22px 24px;
-		border-radius: 8px;
-		background-color: #F0F0F0;
+	&.bg_primary {
+		border-color: transparent;
+		background-color: #F5FBFE;
 	}
 }

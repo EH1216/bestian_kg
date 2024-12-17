@@ -45,22 +45,21 @@
   font-size: 1.6rem;
 }
 
-#v_header .search_form {
+.search_form {
   position: relative;
   height: 4rem;
 }
-#v_header .search_form .form_control {
-  width: 46rem;
+.search_form .form_control {
   height: 4rem;
   padding: 0.5rem 6.5rem 0.5rem 2rem;
   border-radius: 3rem;
 }
-#v_header .search_form .btn_search {
+.search_form .btn_search {
   position: absolute;
   top: calc(50% - 1.2rem);
   right: 2rem;
 }
-#v_header .search_form .btn_search:before {
+.search_form .btn_search:before {
   content: "";
   position: absolute;
   top: calc(50% - 0.7rem);
@@ -68,6 +67,10 @@
   width: 1px;
   height: 1.4rem;
   background-color: #DCE0E5;
+}
+
+#v_header .search_form .form_control {
+  width: 46rem;
 }
 #v_header .util_group {
   display: -webkit-box;

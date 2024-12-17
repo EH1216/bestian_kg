@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>키르키스탄 의안문서관리시스템</title>
+	<link rel="stylesheet" href="../resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script src="../resources/js/ui-common.js"></script>
+</head>
+
+<body>
+	<div class="v_wrapper">
+		<header id="v_header">
+			<div class="v_inner">
+				<h1 id="v_logo">
+					<a href="javascript:void(0)">
+						<img src="../resources/images/common/logo.png" alt="">
+						<span class="text">Жогорку Кенеш<br> Кыргызской Республики</span>
+					</a>
+				</h1>
+				<div class="search_form">
+					<input type="text" class="form_control" placeholder="Search">
+					<button type="button" class="btn_search"><i class="v_ico ico_search"></i></button>
+				</div>
+				<div class="util_group">
+					<div class="util_item util_user">
+						<span class="user_pic">
+							<img src="../resources/images/content/img_picture.png" alt="">
+						</span>
+						<span class="user_name">Председатель Кабинета Министров</span>
+					</div>
+					<div class="util_item util_lang">
+						<button type="button" class="v_btn active">KblP</button>
+						<button type="button" class="v_btn">PYC</button>
+					</div>
+					<div class="util_item util_ctrl">
+						<button type="button" class="v_btn active"><i class="v_ico ico_alarm"></i></button>
+						<button type="button" class="v_btn"><i class="v_ico ico_logout"></i></button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="v_container">
+			<div class="v_inner">
+				<div id="v_sidebar" class="open">
+					<div class="sidebar_inner">
+						<nav class="tab_menu">
+							<ul class="tab_list">
+								<li class="on"><a href="javascript:void(0)">баары</a></li>
+								<li><a href="javascript:void(0)">парламент</a></li>
+							</ul>
+						</nav>
+						<div class="sidebar_cont">
+							<div class="lnb_area">
+								<ul class="depth1">
+									<li class="collapse on"><a href="javascript:void(0)">Подача законопроекта</a>
+										<ul class="depth2">
+											<li class="on"><a href="javascript:void(0)">Повестка дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на повестку дня</a></li>
+											<li><a href="javascript:void(0)">Подача заявления об отмене повестки дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на отмену повестки дня</a></li>
+										</ul>
+									</li>
+									<li class="collapse"><a href="javascript:void(0)">Утверждение законопроекта</a>
+										<ul class="depth2">
+											<li><a href="javascript:void(0)">Повестка дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на повестку дня</a></li>
+											<li><a href="javascript:void(0)">Подача заявления об отмене повестки дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на отмену повестки дня</a></li>
+										</ul>
+									</li>
+									<li class="collapse"><a href="javascript:void(0)">ЗаконопроектРассмотрение</a>
+										<ul class="depth2">
+											<li><a href="javascript:void(0)">Повестка дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на повестку дня</a></li>
+											<li><a href="javascript:void(0)">Подача заявления об отмене повестки дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на отмену повестки дня</a></li>
+										</ul>
+									</li>
+									<li class="collapse"><a href="javascript:void(0)">КомитетЗаседание</a>
+										<ul class="depth2">
+											<li><a href="javascript:void(0)">Повестка дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на повестку дня</a></li>
+											<li><a href="javascript:void(0)">Подача заявления об отмене повестки дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на отмену повестки дня</a></li>
+										</ul>
+									</li>
+									<li class="collapse"><a href="javascript:void(0)">ЗаконопроектСостояние</a>
+										<ul class="depth2">
+											<li><a href="javascript:void(0)">Повестка дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на повестку дня</a></li>
+											<li><a href="javascript:void(0)">Подача заявления об отмене повестки дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на отмену повестки дня</a></li>
+										</ul>
+									</li>
+									<li class="collapse"><a href="javascript:void(0)">Поиск</a>
+										<ul class="depth2">
+											<li><a href="javascript:void(0)">Повестка дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на повестку дня</a></li>
+											<li><a href="javascript:void(0)">Подача заявления об отмене повестки дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на отмену повестки дня</a></li>
+										</ul>
+									</li>
+									<li class="collapse"><a href="javascript:void(0)">ДокументУправление</a>
+										<ul class="depth2">
+											<li><a href="javascript:void(0)">Повестка дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на повестку дня</a></li>
+											<li><a href="javascript:void(0)">Подача заявления об отмене повестки дня</a></li>
+											<li><a href="javascript:void(0)">Согласие на отмену повестки дня</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="shortcut_wrap">
+								<a href="javascript:void(0)" class="v_btn"><i class="v_ico ico_shortcut1"></i></a>
+								<a href="javascript:void(0)" class="v_btn"><i class="v_ico ico_shortcut2"></i></a>
+								<a href="javascript:void(0)" class="v_btn"><i class="v_ico ico_shortcut3"></i></a>
+								<a href="javascript:void(0)" class="v_btn"><i class="v_ico ico_shortcut4"></i></a>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn_sidebar"><i class="v_ico ico_sidebar"></i></button>
+				</div>
+				
+				<div id="v_content">
+					<div class="content_inner">
+						<div class="content_util">
+							<div class="title_wrap">
+								<h2 class="content_tit">안건제출</h2>
+								<button type="button" class="v_btn btn_favorite"><i class="v_ico ico_bookmark"></i></button>
+								<a href="javascript:void(0)" class="v_btn btn_outline_primary btn_sm">Регистрация(등록)</a>
+							</div>
+							<nav class="v_breadcrumb">
+								<ul class="path">
+									<li><i class="v_ico ico_home"></i></li>
+									<li>메뉴명</li>
+									<li>화면명</li>
+								</ul>
+							</nav>
+						</div>
+						<!-- 본문 영역 -->
+						<div class="content_section">
+							<div class="board_search type2"><!-- 검색항목 2줄 넘어갈 경우 클래스 .type2 추가 -->
+								<div class="search_inner">
+									<div class="form_row">
+										<div class="input_item col_4">
+											<label class="form_label">Номер регистрации</label>
+											<select class="form_control">
+												<option>선택하세요</option>
+											</select>
+										</div>
+										<div class="input_item col_8">
+											<label class="form_label">НАЗВАНИЕ(제목)</label>
+											<input type="text" class="form_control" placeholder="입력하세요">
+										</div>
+									</div>
+									<div class="form_row">
+										<div class="input_item">
+											<label class="form_label">Текущая стадия</label>
+											<select class="form_control">
+												<option>선택하세요</option>
+											</select>
+										</div>
+										<div class="input_item">
+											<label class="form_label">ДАТА РЕГИСТРАЦИИ</label>
+											<!-- input type="date" -->
+											<input type="date" class="form_control" value="2024-12-10">
+										</div>
+										<div class="input_item">
+											<label class="form_label">ДАТА РЕГИСТРАЦИИ</label>
+											<select class="form_control">
+												<option>선택하세요</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="search_btn">
+									<button type="button" class="v_btn btn_primary btn_md"><i class="v_ico ico_search_white"></i><span>Поиск</span></button>
+								</div>
+							</div>
+							<nav class="tab_menu type2 mt_6">
+								<ul class="tab_list">
+									<li class="on"><a href="javascript:void(0)">의원접수요청 (10)</a></li>
+									<li><a href="javascript:void(0)">의장검토확인 (3)</a></li>
+								</ul>
+							</nav>
+							<div class="board_info">
+								<div class="left">
+									<div class="total_num">Total <span class="text_primary">103</span></div>
+								</div>
+								<div class="right">
+									<div class="btn_wrap">
+										<button type="button" class="v_btn btn_outline_secondary btn_sm">기타버튼</button>
+										<a href="javascript:void(0)" class="v_btn btn_secondary btn_sm">신규</a>
+									</div>
+								</div>
+							</div>
+							<div class="v_table table_list">
+								<table>
+									<colgroup>
+										<col style="width: 7.8%;">
+										<col>
+										<col style="width: 21.5%;">
+										<col style="width: 10.4%;">
+										<col style="width: 16.9%;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">No</th>
+											<th scope="col">НАЗВАНИЕ(제목)</th>
+											<th scope="col">аталыш</th>
+											<th scope="col">аталыш</th>
+											<th scope="col">дата</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>6-7580/24</td>
+											<td class="text_left">О проекте Закона «О внесении изменений в некоторые законодательные акты Кыргызской Республики в сфере налогообложения и социального страхования»</td>
+											<td class="text_left">Председатель Кабинета Министров</td>
+											<td>28-06-2024</td>
+											<td>Зарегистрирован 12-07-2024</td>
+										</tr>
+										<tr>
+											<td>6-7580/24</td>
+											<td class="text_left">О проекте Закона "О ратификации Соглашения между Кыргызской Республикой и Международным банком реконструкции и развития/Международной ассоциацией развития, Международной финансовой корпорацией и Многосторонним агентством по гарантиям инвестиций об учреждении и деятельности представительств в Кыргызской Республике, подписанного 23 января 2024 года в городе Бишкек"</td>
+											<td class="text_left">Председатель Кабинета Министр</td>
+											<td>28-06-2024</td>
+											<td>Зарегистрирован 12-07-2024</td>
+										</tr>
+										<tr>
+											<td>6-7580/24</td>
+											<td class="text_left">О проекте конституционного Закона «О внесении изменений в конституционный Закон Кыргызской Республики «О статусе судей Кыргызской Республики»</td>
+											<td class="text_left">Сатыбалдиев Э.Р., Сыдыков Б.У., Ормонов У.З., Маматалиев М.А., Алиев М.К.</td>
+											<td>28-06-2024</td>
+											<td>Зарегистрирован 12-07-2024</td>
+										</tr>
+										<tr>
+											<td>6-7580/24</td>
+											<td class="text_left">О проекте Закона «О внесении изменений в некоторые законодательные акты Кыргызской Республики в сфере налогообложения и социального страхования»</td>
+											<td class="text_left">Председатель Кабинета Министров</td>
+											<td>28-06-2024</td>
+											<td>Зарегистрирован 12-07-2024</td>
+										</tr>
+										<tr>
+											<td>6-7580/24</td>
+											<td class="text_left">О проекте Закона «О внесении изменений в некоторые законодательные акты Кыргызской Республики в сфере налогообложения и социального страхования»</td>
+											<td class="text_left">Сатыбалдиев Э.Р., Сыдыков Б.У., Ормонов У.З., Маматалиев М.А., Алиев М.К.</td>
+											<td>28-06-2024</td>
+											<td>Зарегистрирован 12-07-2024</td>
+										</tr>
+										<tr>
+											<td>6-7580/24</td>
+											<td class="text_left">О проекте Закона «О внесении изменений в некоторые законодательные акты Кыргызской Республики в сфере налогообложения и социального страхования»</td>
+											<td class="text_left">Сатыбалдиев Э.Р., Сыдыков Б.У., Ормонов У.З., Маматалиев М.А., Алиев М.К.</td>
+											<td>28-06-2024</td>
+											<td>Зарегистрирован 12-07-2024</td>
+										</tr>
+										<tr>
+											<td>6-7580/24</td>
+											<td class="text_left">О проекте Закона «О внесении изменений в некоторые законодательные акты Кыргызской Республики в сфере налогообложения и социального страхования»</td>
+											<td class="text_left">Сатыбалдиев Э.Р., Сыдыков Б.У., Ормонов У.З., Маматалиев М.А., Алиев М.К.</td>
+											<td>28-06-2024</td>
+											<td>Зарегистрирован 12-07-2024</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="v_pagination">
+								<select class="form_control">
+									<option>10개</option>
+								</select>
+								<a href="javascript:void(0)" class="direction first"><i class="v_ico ico_paging_first"></i></a>
+								<a href="javascript:void(0)" class="direction prev"><i class="v_ico ico_paging_prev"></i></a>
+								<a href="javascript:void(0)">1</a>
+								<a href="javascript:void(0)">2</a>
+								<a href="javascript:void(0)" class="active"><strong>3</strong></a>
+								<a href="javascript:void(0)">4</a>
+								<a href="javascript:void(0)">5</a>
+								<a href="javascript:void(0)">6</a>
+								<a href="javascript:void(0)">7</a>
+								<a href="javascript:void(0)">8</a>
+								<a href="javascript:void(0)">9</a>
+								<a href="javascript:void(0)">10</a>
+								<a href="javascript:void(0)" class="direction next"><i class="v_ico ico_paging_next"></i></a>
+								<a href="javascript:void(0)" class="direction last"><i class="v_ico ico_paging_last"></i></a>
+							</div>
+						</div>
+						<!-- // 본문 영역 -->
+					</div>
+
+					<footer id="v_footer">
+						<address class="address">2024 © Кыргыз Республикасынын Жогорку Кеңеши. Бардык укуктар корголгон</address>
+					</footer>
+				</div>
+			</div>
+		</div>
+
+		<div id="v_quickmenu" class="close">
+			<button type="button" class="btn_quickmenu">Quick</button>
+			<div class="quick_wrap">
+				<div class="quick_header">
+					<span class="quick_tit">메뉴 바로가기</span>
+					<button type="button" class="btn_quick_close"><i class="v_ico ico_close_white"></i></button>
+				</div>
+				<div class="link_wrap">
+					<div class="link_item">
+						<a href="javascript:void(0)">Список законопроектовСписок законопроектов</a>
+						<button type="button" class="v_btn btn_delete"><i class="v_ico ico_delete"></i></button>
+					</div>
+					<div class="link_item">
+						<a href="javascript:void(0)">통합검색</a>
+						<button type="button" class="v_btn btn_delete"><i class="v_ico ico_delete"></i></button>
+					</div>
+					<div class="link_item">
+						<a href="javascript:void(0)">공지사항</a>
+						<button type="button" class="v_btn btn_delete"><i class="v_ico ico_delete"></i></button>
+					</div>
+					<div class="link_item">
+						<a href="javascript:void(0)">자료실</a>
+						<button type="button" class="v_btn btn_delete"><i class="v_ico ico_delete"></i></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

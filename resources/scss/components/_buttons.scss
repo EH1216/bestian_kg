@@ -11,14 +11,14 @@
 	white-space: nowrap;
 	overflow: hidden;
 
-	border-radius: 4px;
+	border-radius: .4rem;
 
 	font-family: $font-family-base;
 	font-weight: 600;
 	font-size: 1.4rem;
 
 	transition-duration: .2s;
-	transition-property: transform;
+	transition-property: transform, opacity;
 	will-change: transform;
 
 	.v_ico {
@@ -229,15 +229,66 @@
 	}
 }
 
+.btn_text_primary {
+	height: 3rem;
+	padding: 0 1rem;
+	color: $primary;
+	font-weight: 400;
+	letter-spacing: 0;
+
+	&:hover,
+	&:focus {
+		color: #008bc7;
+		background-color: #f0f0f0;
+	}
+
+	&:active {
+		color: #0082b9;
+		background-color: #e0e0e0;
+	}
+
+	&:disabled,
+	&.disabled {
+		color: #99d4ed;
+	}
+
+	&.btn_xs {
+		padding: 0 1rem;
+	}
+}
+
+.btn_text_gray {
+	height: 3rem;
+	padding: 0 1rem;
+	color: #7F8A94;
+	font-weight: 400;
+	letter-spacing: 0;
+
+	&:hover,
+	&:focus {
+		color: #66707a;
+		background-color: #f0f0f0;
+	}
+
+	&:active {
+		color: #66707a;
+		background-color: #e0e0e0;
+	}
+
+	&:disabled,
+	&.disabled {
+		color: #a3a9af;
+	}
+}
+
 // 버튼그룹
 .btn_group {
 	display: flex;
-	gap: $spacing;
-	margin-top: 3rem;
+	gap: 1rem;
 
 	>div {
 		display: flex;
-		gap: $spacing;
+		gap: 1rem;
 	}
 
 	.left {

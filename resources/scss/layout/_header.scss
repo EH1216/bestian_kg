@@ -26,12 +26,11 @@
 		}	
 	}
 
-	.search_form {
+	@at-root .search_form {
 		position: relative;
 		height: 4rem;
 
 		.form_control {
-			width: 46rem;
 			height: 4rem;
 			padding: .5rem 6.5rem .5rem 2rem;
 			border-radius: 3rem;
@@ -51,6 +50,12 @@
 				height: 1.4rem;
 				background-color: $border-color;
 			}
+		}
+	}
+
+	.search_form {
+		.form_control {
+			width: 46rem;
 		}
 	}
 	

@@ -38,6 +38,7 @@
 				font-weight: 500;
 				font-size: 1.6rem;
 				letter-spacing: -.005em;
+				text-align: center;
 				transition: background-color .2s ease, text-shadow .2s ease;
 	
 				&.disabled {
@@ -80,10 +81,6 @@
 				}
 			}
 		}
-	}
-	
-	@at-root .tab_cont {
-		display: none;
 	}
 
 	&.type2 {

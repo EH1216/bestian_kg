@@ -68,3 +68,9 @@
 	justify-content: space-between;
 	align-items: baseline;
 }
+
+.content_row {
+	display: flex;
+	gap: 3rem;
+	width: calc(100% - 3rem);
+}

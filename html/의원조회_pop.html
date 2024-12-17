@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>키르키스탄 의안문서관리시스템</title>
+	<link rel="stylesheet" href="../resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script src="../resources/js/ui-common.js"></script>
+</head>
+
+<body class="window_popup popup_inquiry3">
+	<div class="popup_inner">
+		<div class="popup_header">
+			<h2 class="popup_tit">의원 조회</h2>
+		</div>
+		<div class="popup_body">
+			<div class="popup_cont">
+				<div class="btn_group mb_2">
+					<div class="right">
+						<button type="button" class="v_btn btn_outline_neutral btn_sm">선택 삭제</button>
+						<button type="button" class="v_btn btn_primary btn_sm">추가</button>
+					</div>
+				</div>
+				<div class="v_table table_list fixed_header type2">
+					<table>
+						<colgroup>
+							<col span="2" style="width: 26.2%;">
+							<col>
+							<col style="width: 18.1%;">
+							<col style="width: 11.3%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">소속</th>
+								<th scope="col">직책</th>
+								<th scope="col">이름</th>
+								<th scope="col">출석여부</th>
+								<th scope="col">삭제</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>국회의장실</td>
+								<td>국회의장</td>
+								<td>이범수</td>
+								<td>
+									<select class="form_control full">
+										<option>출석</option>
+										<option>미출석</option>
+									</select>
+								</td>
+								<td>
+									<button type="button" class="v_btn"><i class="v_ico ico_trashcan"></i></button>
+								</td>
+							</tr>
+							<tr>
+								<td>국회의장실</td>
+								<td>국회부의장</td>
+								<td>김영진</td>
+								<td>
+									<select class="form_control full">
+										<option>미출석</option>
+										<option>출석</option>
+									</select>
+								</td>
+								<td>
+									<button type="button" class="v_btn"><i class="v_ico ico_trashcan"></i></button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="popup_footer">
+				<div class="btn_group">
+					<button type="button" class="v_btn btn_outline_neutral btn_md" onclick="closeWindow();">닫기</button>
+					<button type="button" class="v_btn btn_primary btn_md">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
