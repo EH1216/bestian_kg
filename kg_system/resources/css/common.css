@@ -43,6 +43,7 @@ body {
   font-weight: 400;
   font-size: 1.4rem;
   font-family: "Pretendard", "malgun gothic", Arial, sans-serif;
+  line-height: normal;
   background-color: #f3f5f6;
   overflow-y: hidden;
   word-wrap: break-word;
@@ -1708,6 +1709,27 @@ u {
   background-image: url("../images/common/ico_arr_right.png");
 }
 
+.ico_upload_secondary {
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  background-image: url("../images/common/ico_upload_secondary.png");
+}
+
+.ico_download_secondary {
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  background-image: url("../images/common/ico_download_secondary.png");
+}
+
+.ico_print_secondary {
+  width: 2.4rem;
+  height: 2.4rem;
+  line-height: 2.4rem;
+  background-image: url("../images/common/ico_print_secondary.png");
+}
+
 /* 불릿 시스템 */
 .v_tit {
   margin-bottom: 2rem;
@@ -2646,7 +2668,7 @@ textarea.form_control {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 .board_info .info_wrap {
   display: -webkit-box;
