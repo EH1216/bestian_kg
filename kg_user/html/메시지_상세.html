@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>키르기스스탄 의원용 프로그램</title>
+	<link rel="stylesheet" href="../resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script src="../resources/js/ui-common.js"></script>
+</head>
+
+<body>
+	<div class="v_wrapper">
+		<div id="v_sidebar">
+			<div class="sidebar_inner">
+				<ul class="lnb_area">
+					<li><a href="javascript:void(0)"><i class="v_ico ico_menu1"></i><span>의사일정</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_menu2"></i><span>회의자료</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_menu3"></i><span>질의/발언</span></a></li>
+				</ul>
+				<div class="notice_wrap">
+					<div class="notice_inner">
+						<h2 class="notice_tit"><i class="v_ico ico_speaker"></i><span>공지사항</span></h2>
+						<ul class="notice_list">
+							<li>На этой неделе у меня есть расписание законопроекта парламента о бюджете.</li>
+							<li>Объявление о свободных выступлениях в течение 5 минут.</li>
+							<li>Расписание Национального собрания на этой неделе закрыто.</li>
+							<li>Объявление о свободных выступлениях в течение 5 минут.</li>
+							<li>«Кыргыз Республикасынын Санарип Кодекси» Кодекстин долбоору.</li>
+							<li>На этой неделе у меня есть расписание законопроекта парламента о бюджете.</li>
+							<li>Объявление о свободных выступлениях в течение 5 минут.</li>
+							<li>Расписание Национального собрания на этой неделе закрыто.</li>
+							<li>Объявление о свободных выступлениях в течение 5 минут.</li>
+							<li>«Кыргыз Республикасынын Санарип Кодекси» Кодекстин долбоору.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="shortcut_wrap">
+					<a href="javascript:void(0)" class="v_btn"><i class="v_ico ico_shortcut1"></i><span>기능</span></a>
+					<a href="javascript:void(0)" class="v_btn"><i class="v_ico ico_shortcut2"></i><span>정보</span></a>
+					<a href="javascript:void(0)" class="v_btn"><i class="v_ico ico_shortcut3"></i><span>메시지</span></a>
+					<a href="javascript:void(0)" class="v_btn" onclick="openModal('#layer_lang', this);"><i class="v_ico ico_shortcut4"></i><span>언어</span></a>
+				</div>
+			</div>
+		</div>
+
+		<div id="v_content">
+			<div class="content_header">
+				<h1 class="content_title">386회(임시회) 제 1차 본회의</h1>
+				<div class="btn_wrap">
+					<button type="button" class="v_btn btn_login"><i class="v_ico ico_logout"></i></button>
+				</div>
+			</div>
+			<div class="content_inner">
+				<!-- 본문 영역 -->
+				<div class="content_top">
+					<button type="button" class="v_btn btn_outline_primary btn_md"><i class="v_ico ico_back"></i><span>BACK</span></button>
+				</div>
+				<div class="content_section">
+					<div class="form_col message_wrap">
+						<div class="input_item">
+							<label class="form_label">보낸 사람</label>
+							<div class="recipient_area">
+								<input type="text" class="form_control full" value="Абдугапаров А.А." readonly>
+								<!-- 보낸 사람 많아질 경우 말줄임 처리 -->
+								<div class="text_box" title="Абдугапаров А.А." tabindex="0"><span class="text_ellipsis">Абдугапаров А.А.</span></div>
+							</div>
+						</div>
+						<div class="input_item">
+							<label class="form_label">보낸 날짜</label>
+							<input type="text" class="form_control full" value="25-04-2024" readonly>
+						</div>
+						<div class="input_item">
+							<label class="form_label">내용</label>
+							<div class="text_area">
+								<textarea class="form_control full" readonly>Салам, сиз менен таанышканыма кубанычтамын. Мен Абдугапаров А.А., Жогорку Кеңештин депутаты.</textarea>
+								<div class="text_count">(<span class="text_black">100</span>/500)</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn_group_fixed">
+					<button type="button" class="v_btn btn_primary btn_md">답장</button>
+				</div>
+				<!-- // 본문 영역 -->
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

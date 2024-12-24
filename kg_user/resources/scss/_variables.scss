@@ -1,0 +1,99 @@
+//
+// variables
+//
+
+// 사이트 기본 설정
+
+// 경로
+$url-img: "../images" !default;
+$url-img-common: "../images/common" !default;
+
+// COLORS
+$default: #3B4044 !default;
+$black: #181A1B !default;
+$white: #fff !default;
+$primary: #4091FD !default;
+$secondary: #00D0D0 !default;
+$tertiary: #00B4E5 !default;
+$neutral: #F3F5F6 !default;
+$green: #00AA02 !default;
+$orange: #F86800 !default;
+$red: #E22A21 !default;
+$gray: #525960 !default;
+$invalid: $red !default;
+$border-color: #DCE0E5 !default;
+$placeholder-color: #A8B3BD;
+$disabled-color: rgba(24, 26, 27, .4);
+
+$colors: () !default;
+$colors: map-merge(("default": $default,
+	"black": $black,
+	"white": $white,
+	"primary": $primary,
+	"secondary": $secondary,
+	"tertiary": $secondary,
+	"neutral": $neutral,
+	"green": $green,
+	"orange": $orange,
+	"red": $red,
+	"gray": $gray,
+	"invalid": $invalid,
+),
+$colors);
+
+// 글꼴
+$font-family-base: "Pretendard",
+"malgun gothic",
+Arial,
+sans-serif !default;
+
+$font-size-1: max(0.729167vw, 9px) !default; // 14px
+$font-size-2: max(0.781250vw, 10px) !default; // 15px
+$font-size-3: max(0.833333vw, 11px) !default; // 16px
+$font-size-4: max(0.937500vw, 12px) !default; // 18px
+$font-size-5: max(1.041667vw, 13px) !default; // 20px
+$font-size-6: max(1.25vw, 16px) !default; // 24px
+$font-size-7: max(1.666667vw, 21px) !default; // 32px
+$font-size-8: max(3.125vw, 40px) !default; // 60px
+
+// 크기
+$form-height: max(1.875vw, 24px);
+
+$size-2: max(0.104167vw, 2px);
+$size-3: max(0.15625vw, 2px);
+$size-4: max(0.208333vw, 3px);
+$size-5: max(0.260417vw, 3px);
+$size-6: max(0.3125vw, 4px);
+$size-7: max(0.364583vw, 5px);
+$size-8: max(0.416667vw, 5px);
+$size-10: max(0.520833vw, 7px);
+$size-12: max(0.625vw, 8px);
+$size-13: max(0.677083vw, 9px);
+$size-14: max(0.78125vw, 9px);
+$size-15: max(0.729167vw, 10px);
+$size-16: max(0.833333vw, 11px);
+$size-18: max(0.9375vw, 12px);
+$size-19: max(0.989583vw, 13px);
+$size-20: max(1.041667vw, 13px);
+$size-22: max(1.145833vw, 15px);
+$size-24: max(1.25vw, 16px);
+$size-25: max(1.302083vw, 17px);
+$size-30: max(1.5625vw, 20px);
+$size-32: max(1.666667vw, 21px);
+$size-35: max(1.822917vw, 23px);
+$size-36: max(1.875vw, 24px);
+$size-40: max(2.083333vw, 27px);
+$size-45: max(2.34375vw, 30px);
+$size-50: max(2.604167vw, 33px);
+$size-52: max(2.708333vw, 35px);
+$size-56: max(2.916667vw, 37px);
+$size-60: max(3.125vw, 40px);
+$size-64: max(3.333333vw, 43px);
+$size-70: max(3.645833vw, 47px);
+$size-80: max(4.166667vw, 53px);
+$size-85: max(4.427083vw, 57px);
+$size-90: max(4.6875vw, 60px);
+$size-100: max(5.208333vw, 67px);
+
+// 호버 스타일
+$shadow: 0.520833vw 0.520833vw 1.041667vw 0 rgba(0, 0, 0, .05);

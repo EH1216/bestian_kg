@@ -1,0 +1,50 @@
+// 크기
+.text_xs {
+	font-size: $font-size-1 !important;
+}
+
+.text_sm {
+	font-size: $font-size-2 !important;
+}
+
+.text_md {
+	font-size: $font-size-3 !important;
+}
+
+.text_lg {
+	font-size: $font-size-4 !important;
+}
+
+.text_xl {
+	font-size: $font-size-5 !important;
+}
+
+.text_xxl {
+	font-size: $font-size-6 !important;
+}
+
+// 두께
+.text_normal {
+	font-weight: 400 !important;
+}
+
+.text_medium {
+	font-weight: 500 !important;
+}
+
+.text_bold {
+	font-weight: 600 !important;
+}
+
+// 밑줄
+u {
+	text-underline-position: from-font;
+}
+
+// 색상
+@each $color,
+$value in $colors {
+	.text_#{$color} {
+		color: $value !important;
+	}
+}

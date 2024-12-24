@@ -1,0 +1,152 @@
+#v_sidebar {
+	flex: 0 0 auto;
+	width: 15.625vw;
+	min-width: 200px;
+
+	.sidebar_inner {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		background-color: $white;
+	}
+
+	.lnb_area {
+		li {
+			a {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: $size-10;
+				position: relative;
+				height: 14.8149vh;
+				min-height: 107px;
+				color: $white;
+				font-weight: 600;
+				font-size: $font-size-6;
+				text-align: center;
+			}
+
+			&:nth-child(1) {
+				a {
+					background-color: $secondary;
+				}
+			}
+
+			&:nth-child(2) {
+				a {
+					background-color: $tertiary;
+				}
+			}
+
+			&:nth-child(3) {
+				a {
+					background-color: $primary;
+				}
+			}
+
+			&.active {
+				a {
+					&:after {
+						content: '';
+						display: inline-block;
+						position: absolute;
+						top: calc(50% - $size-45);
+						right: calc(50% - $size-45);
+						width: $size-24;
+						height: $size-24;
+						background-image: url(#{$url-img-common}/ico_error.svg);
+					}
+				}
+			}
+		}
+	}
+
+	.notice_wrap {
+		flex: 1;
+		padding: $size-20 $size-10 $size-30 $size-20;
+		color: $black;
+		overflow: hidden;
+
+		.notice_inner {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+
+		.notice_tit {
+			display: flex;
+			align-items: center;
+			gap: $size-5;
+			flex: 0 0 auto;
+			height: $size-40;
+			margin-bottom: $size-10;
+			font-weight: 600;
+			font-size: $font-size-5;
+
+			.v_ico {
+				flex: 0 0 auto;
+			}
+		}
+
+		.notice_list {
+			flex: 1;
+			padding-right: $size-5;
+			overflow-y: auto;
+
+			li {
+				position: relative;
+				padding-left: $size-10;
+				font-size: $font-size-3;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: $size-8;
+					left: 0;
+					width: $size-3;
+					height: $size-3;
+					border-radius: 50%;
+					background-color: #66707A;
+				}
+
+				+li {
+					margin-top: $size-10;
+				}
+			}
+		}
+	}
+
+	.shortcut_wrap {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		flex: 0 0 auto;
+		height: 23.703703vh;
+		min-height: 171px;
+
+		.v_btn {
+			flex-direction: column;
+			gap: $size-10;
+			border-radius: 0;
+			font-weight: 400;
+			font-size: $font-size-4;
+			white-space: wrap;
+			text-align: center;
+			letter-spacing: 0;
+
+			.v_ico {
+				margin-right: 0;
+			}
+
+			&:nth-child(1),
+			&:nth-child(4) {
+				background-color: #F9FAFB;
+			}
+
+			&:nth-child(2),
+			&:nth-child(3) {
+				background-color: #E7F1FF;
+			}
+		}
+	}
+}

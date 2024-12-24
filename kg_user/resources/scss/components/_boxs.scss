@@ -1,0 +1,23 @@
+/* 박스 */
+
+.v_box {
+	padding: $size-30;
+	border: 1px solid $border-color;
+	border-radius: $size-20;
+
+	&.bg_primary {
+		padding: $size-20;
+		border: 0;
+		border-radius: $size-10;
+		color: $gray;
+		background-color: #F2F8FF;
+
+		.text_sm {
+			line-height: $size-15;
+		}
+
+		&.type2 {
+			border: 1px solid #D6E7FF;
+		}
+	}
+}

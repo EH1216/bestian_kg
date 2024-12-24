@@ -1,0 +1,372 @@
+// 
+// Forms
+// 
+
+.form_control {
+	max-width: 100%;
+	height: $form-height;
+	border: 1px solid $border-color;
+	border-radius: $size-6;
+	padding: $size-5 $size-15;
+	color: $black;
+	font-size: $font-size-1;
+	line-height: max(1.875vw, 24px);
+	appearance: none;
+	text-align: left;
+	background: $white;
+	vertical-align: middle;
+
+	transition-duration: .2s;
+	transition-property: color, border-color, box-shadow;
+	will-change: color, border-color, box-shadow;
+
+	&::-ms-clear {
+		display: none;
+	}
+
+	&.full {
+		width: 100% !important;
+	}
+
+	&.inline {
+		width: auto !important;
+	}
+
+	&.is_invalid {
+		border-color: $invalid !important;
+
+		&:focus {
+			outline-color: $invalid;
+		}
+	}
+
+	&:focus {
+		position: relative;
+		outline: 1px solid $primary;
+		outline-offset: -1px;
+	}
+
+	&::-webkit-input-placeholder {
+		color: $placeholder-color;
+		opacity: 1;
+	}
+
+	&:-ms-input-placeholder {
+		color: $placeholder-color !important;
+		opacity: 1;
+	}
+
+	&:disabled {
+		color: $disabled-color;
+		background-color: #f3f5f6;
+		opacity: 1;
+
+		&::-ms-value {
+			color: $disabled-color !important;
+		}
+	}
+
+	&[readonly] {
+		color: #66707A;
+		background-color: #F9FAFB;
+		opacity: 1;
+		cursor: default;
+
+		&::-ms-value {
+			color: #66707A !important;
+		}
+	}
+}
+
+select.form_control {
+	max-width: 100%;
+	line-height: normal;
+	padding-right: 1.822917vw;
+	background: #fff url(#{$url-img-common}/ico_chevron_down.svg) no-repeat right 0.520833vw center;
+	background-size: auto 1.25vw;
+
+	&:disabled {
+		background-image: url(#{$url-img-common}/ico_chevron_down_disabled.svg);
+	}
+
+	&::-ms-expand {
+		display: none;
+	}
+}
+
+input[type=text]:not(.form_datepicker),
+input[type=password] {
+	&.is_invalid {
+		background: url(#{$url-img-common}/ico_error.svg) no-repeat right 0.520833vw center;
+		background-size: auto $size-24;
+	}
+}
+
+textarea.form_control {
+	height: auto;
+	padding-top: $size-15;
+	padding-bottom: $size-15;
+	overflow: auto;
+	line-height: inherit;
+	resize: none;
+}
+
+.text_invalid {
+	margin: $size-5 0 0 $size-5;
+	font-weight: 600;
+	font-size: $size-12;
+	line-height: $size-14;
+	letter-spacing: -.005em;
+}
+
+.check_area {
+	display: flex;
+	flex-wrap: wrap;
+	gap: $size-5 $size-22;
+}
+
+.check_item {
+	position: relative;
+
+	input {
+		$size: $size-20;
+
+		&[type=checkbox],
+		&[type=radio] {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			opacity: 0;
+
+			+label {
+				position: relative;
+				color: #555;
+
+				&:before {
+					content: '';
+					box-sizing: border-box;
+					display: inline-block;
+					width: $size;
+					height: $size;
+					border: $size-2 solid #A8B3BD;
+					vertical-align: middle;
+					border-radius: $size-4;
+					margin: -0.104167vw 0.260417vw 0 0;
+					cursor: pointer;
+
+					transition-duration: .2s;
+					transition-property: border-color, box-shadow, background-color;
+					will-change: border-color, box-shadow, background-color;
+				}
+			}
+
+			&:disabled {
+				+label {
+					color: #8E8E8E;
+
+					&:before {
+						border-color: rgba(168, 179, 189, .4);
+						box-shadow: none;
+					}
+				}
+			}
+		}
+
+		&[type=checkbox] {
+			&:checked {
+				+label {
+					&:before {
+						border-color: transparent;
+						background: $primary url(#{$url-img-common}/ico_checkbox_checked.svg) no-repeat 50% 50%;
+					}
+				}
+
+				&:disabled {
+					+label {
+						&:before {
+							background-color: rgba(0, 148, 211, .4);
+						}
+					}
+				}
+			}
+		}
+
+		&[type=radio] {
+			+label {
+				&:before {
+					border-radius: 50%;
+				}
+			}
+
+			&:checked {
+				+label {
+					&:before {
+						border-color: $primary;
+						background: $white url(#{$url-img-common}/ico_radio_checked.svg) no-repeat 50% 50%;
+					}
+				}
+
+				&:disabled {
+					+label {
+						&:before {
+							background-image: url(#{$url-img-common}/ico_radio_checked_disabled.svg);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.input_group {
+	display: flex;
+	align-items: center;
+
+	.form_control {
+		+.form_control {
+			margin-left: $size-10;
+		}
+	}
+
+	.text {
+		flex: 0 0 auto;
+		padding: 0 $size-5;
+		color: #525960;
+	}
+
+	.input_addon {
+		padding-left: $size-10;
+
+		.v_btn {
+			+.v_btn {
+				margin-left: $size-10;
+			}
+		}
+	}
+}
+
+.form_row {
+	display: flex;
+	align-items: center;
+
+	>.input_item {
+		display: flex;
+		align-items: center;
+		flex: 1;
+		max-width: 50%;
+
+		>.form_label {
+			flex: 0 0 auto;
+			margin-right: $size-20;
+			font-weight: 500;
+		}
+
+		>.form_control {
+			width: 100%;
+
+			+.form_control {
+				margin-left: $size-12;
+			}
+		}
+
+		>.input_group {
+			width: 100%;
+
+			.form_control {
+				width: 100%;
+			}
+
+			.check_area {
+				flex: 0 0 auto;
+			}
+		}
+
+		>.check_area {
+			width: 100%;
+		}
+	}
+
+	+.form_row {
+		margin-top: $size-10;
+	}
+}
+
+.form_col {
+	display: flex;
+	flex-direction: column;
+	gap: $size-20;
+
+	>.input_item {
+		display: flex;
+		gap: $size-10;
+
+		>.form_label {
+			width: $size-100;
+			color: $black;
+			font-weight: 500;
+			font-size: $font-size-2;
+		}
+	}
+}
+
+.col {
+	&_1 {
+		flex: 0 0 8.333333% !important;
+		max-width: 8.333333% !important;
+	}
+
+	&_2 {
+		flex: 0 0 16.666667% !important;
+		max-width: 16.666667% !important;
+	}
+
+	&_3 {
+		flex: 0 0 25% !important;
+		max-width: 25% !important;
+	}
+
+	&_4 {
+		flex: 0 0 33.333333% !important;
+		max-width: 33.333333% !important;
+	}
+
+	&_5 {
+		flex: 0 0 41.666667% !important;
+		max-width: 41.666667% !important;
+	}
+
+	&_6 {
+		flex: 0 0 50% !important;
+		max-width: 50% !important;
+	}
+
+	&_7 {
+		flex: 0 0 58.333333% !important;
+		max-width: 58.333333% !important;
+	}
+
+	&_8 {
+		flex: 0 0 66.666667% !important;
+		max-width: 66.666667% !important;
+	}
+
+	&_9 {
+		flex: 0 0 75% !important;
+		max-width: 75% !important;
+	}
+
+	&_10 {
+		flex: 0 0 83.333333% !important;
+		max-width: 83.333333% !important;
+	}
+
+	&_11 {
+		flex: 0 0 91.666667% !important;
+		max-width: 91.666667% !important;
+	}
+
+	&_12 {
+		flex: 0 0 100% !important;
+		max-width: 100% !important;
+	}
+}

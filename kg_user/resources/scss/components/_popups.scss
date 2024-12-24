@@ -1,0 +1,149 @@
+
+/* 팝업 */
+
+// 레이어 팝업
+.layer_open {
+	overflow-y: hidden;
+}
+
+.layer_popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(#000, .6);
+
+	.popup_inner {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		z-index: 1100;
+		width: 41.666667vw;
+		min-width: 533px;
+		height: auto;
+		min-height: 333px;
+		margin-top: 0;
+		border-radius: $size-20;
+		overflow: hidden;
+		background-color: $white;
+		transition-duration: .3s;
+		transition-property: transform;
+	}
+
+	&.hide {
+		opacity: 0;
+		visibility: hidden;
+
+		.popup_inner {
+			transform: translateY(-30px);
+		}
+	}
+
+	&.show {
+		opacity: 1;
+		visibility: visible;
+
+		.popup_inner {
+			transform: translateY(0);
+		}
+	}
+
+	&.layer_sm {
+		.popup_inner {
+			width: 26.041667vw;
+			min-width: 333px;
+			min-height: 153px;
+			background-color: #E7F1FF;
+		}
+
+		.popup_header {
+			height: auto;
+			padding: $size-30 0;
+			border-bottom: 0;
+		}
+
+		.popup_body {
+			padding: 0 $size-50 $size-40;
+		}
+	}
+}
+
+.popup_header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: $size-70;
+	padding: 0 $size-50;
+	border-bottom: 1px solid #DDDDDD;
+
+	.popup_tit {
+		color: #222;
+		font-weight: 600;
+		font-size: $font-size-6;
+	}
+}
+
+.popup_body {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	max-height: 80vh;
+	padding: $size-30;
+	overflow-y: auto;
+}
+
+.popup_cont {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	height: 100%;
+
+	.board_search {
+		.form_row {
+			>div {
+				+div {
+					padding-left: $size-20;
+				}
+			}
+
+			>.input_item_fit {
+				flex: 0 0 50%;
+			}
+		}
+
+		.form_control {
+			height: $size-40;
+		}
+	}
+
+	.table_list {
+		tbody {
+			td {
+				height: $size-45;
+			}
+		}
+	}
+}
+
+.popup_footer {
+	flex: 0 0 auto;
+	padding-top: $size-30;
+
+	.btn_group {
+		justify-content: center;
+		margin-top: 0;
+	}
+}
+
+.popup_header~.btn_close_popup {
+	position: absolute;
+	top: $size-19;
+	right: $size-24;
+	width: $size-32;
+	height: $size-32;
+}

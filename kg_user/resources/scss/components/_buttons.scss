@@ -1,0 +1,254 @@
+//
+// Buttons
+// 
+
+.v_btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	vertical-align: middle;
+	white-space: nowrap;
+	overflow: hidden;
+
+	border-radius: $size-4;
+
+	font-family: $font-family-base;
+	font-weight: 600;
+	font-size: $font-size-1;
+	letter-spacing: -0.005em;
+
+	transition-duration: .2s;
+	transition-property: transform, opacity;
+	will-change: transform;
+
+	.v_ico {
+		flex: 0 0 auto;
+
+		&:first-child {
+			margin-right: $size-4;
+		}
+
+		&:only-child {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	*+.v_ico {
+		margin-left: $size-4;
+	}
+
+	&:disabled,
+	&.disabled {
+		cursor: default;
+
+		&:hover,
+		&:focus,
+		&:active {
+			outline: 0;
+		}
+	}
+}
+
+// 크기
+.btn_xs {
+	border: 1px solid transparent;
+	min-width: $size-40;
+	height: $size-30;
+	padding: 0 $size-12;
+	font-size: $size-12;
+}
+
+.btn_sm {
+	border: 1px solid transparent;
+	min-width: $size-40;
+	height: $size-36;
+	padding: 0 $size-12;
+	font-size: $size-12;
+}
+
+.btn_md {
+	border: 1px solid transparent;
+	min-width: $size-56;
+	height: $size-40;
+	padding: 0 $size-16;
+	font-size: $font-size-1;
+}
+
+.btn_lg {
+	border: 1px solid transparent;
+	min-width: $size-64;
+	height: $size-52;
+	padding: 0 $size-20;
+	font-size: $font-size-1;
+}
+
+// 형태
+.btn_block {
+	display: flex;
+	width: 100%;
+}
+
+// 색상
+.btn_primary {
+	color: $white;
+	background-color: $primary;
+
+	&:hover,
+	&:focus {
+		background-color: #3c88ee;
+	}
+
+	&:active {
+		background-color: #387fde;
+	}
+
+	&:disabled,
+	&.disabled {
+		color: #e1edff;
+		background-color: #b3d3fe;
+	}
+}
+
+.btn_outline_primary {
+	border: 1px solid $primary;
+	color: $primary;
+	background-color: $white;
+
+	&:hover,
+	&:focus {
+		border-color: #3c88ee;
+		color: #3c88ee;
+		background-color: #f0f0f0;
+	}
+
+	&:active {
+		border-color: #387fde;
+		color: #387fde;
+		background-color: #e0e0e0;
+	}
+
+	&:disabled,
+	&.disabled {
+		border-color: #b3d3fe;
+		color: #b3d3fe;
+	}
+}
+
+.btn_secondary {
+	border: 1px solid $secondary;
+	color: $white;
+	background-color: $secondary;
+
+	&:hover,
+	&:focus {
+		background-color: #00c4c4;
+	}
+
+	&:active {
+		background-color: #00b7b7;
+	}
+
+	&:disabled,
+	&.disabled {
+		color: #d6f7f7;
+		background-color: #99ecec;
+	}
+}
+
+.btn_outline_secondary {
+	border: 1px solid $secondary;
+	color: $secondary;
+	background-color: $white;
+
+	&:hover,
+	&:focus {
+		border-color: #00c4c4;
+		color: #00c4c4;
+		background-color: #f0f0f0;
+	}
+
+	&:active {
+		border-color: #00b7b7;
+		color: #00b7b7;
+		background-color: #e0e0e0;
+	}
+
+	&:disabled,
+	&.disabled {
+		border-color: #99ecec;
+		color: #99ecec;
+	}
+}
+
+.btn_neutral {
+	border: 1px solid transparent;
+	color: $gray;
+	background-color: $neutral;
+
+	&:hover,
+	&:focus {
+		color: #66707a;
+		background-color: #e5e7e8;
+	}
+
+	&:active {
+		color: #66707a;
+		background-color: #d5d7d8;
+	}
+
+	&:disabled,
+	&.disabled {
+		color: #a1a7ad;
+		background-color: #fafbfb;
+	}
+}
+
+.btn_outline_neutral {
+	border: 1px solid #E7EBEE;
+	color: $gray;
+	background-color: $white;
+
+	&:hover,
+	&:focus {
+		border-color: #d9dde0;
+		color: #66707a;
+		background-color: #f0f0f0;
+	}
+
+	&:active {
+		border-color: #cbced1;
+		color: #66707a;
+		background-color: #e0e0e0;
+	}
+
+	&:disabled,
+	&.disabled {
+		border-color: #f5f7f8;
+		color: #a3a9af;
+	}
+}
+
+// 버튼그룹
+.btn_group {
+	display: flex;
+	gap: $size-10;
+
+	>div {
+		display: flex;
+		gap: $size-10;
+	}
+
+	.left {
+		margin-right: auto;
+	}
+
+	.right {
+		margin-left: auto;
+	}
+
+	.center {
+		margin: auto;
+	}
+}

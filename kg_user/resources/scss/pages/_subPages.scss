@@ -1,0 +1,869 @@
+/* 서브 */
+
+// 의사일정 목록
+.schedule_list {
+	li {
+		a {
+			display: flex;
+			align-items: center;
+			gap: $size-10;
+			padding: $size-20;
+			border-radius: $size-8;
+			color: $black;
+		}
+
+		.schedule_num {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex: 0 0 auto;
+			width: $size-40;
+			height: $size-40;
+			border-radius: 50%;
+			font-size: $font-size-2;
+			background-color: #D6E7FF;
+		}
+
+		.schedule_cont {
+			flex: 1;
+		}
+
+		&:nth-child(odd) {
+			a {
+				background-color: #F2F8FF;
+			}
+		}
+
+		+li {
+			margin-top: $size-10;
+		}
+	}
+}
+
+// 의사일정 상세
+.info_wrap {
+	display: flex;
+	flex-wrap: wrap;
+	gap: $size-20;
+
+	>li {
+		font-size: $font-size-2;
+
+		strong {
+			color: $black;
+			font-weight: 600;
+		}
+
+		span {
+			color: $gray;
+			line-height: $size-15;
+		}
+	}
+
+	&.type1 {
+		>li {
+			display: flex;
+			align-items: center;
+			gap: $size-10;
+
+			strong {
+				line-height: $size-15;
+			}
+		}
+	}
+
+	&.type2 {
+		>li {
+			flex: 1;
+
+			strong {
+				display: inline-flex;
+				align-items: center;
+				height: $size-35;
+				margin-bottom: $size-20;
+				padding: 0 $size-20;
+				border-radius: $size-20;
+				background-color: #E0EBFF;
+			}
+
+			span {
+				display: block;
+			}
+		}
+	}
+}
+
+.file_wrap {
+	li {
+		padding: $size-10 0;
+		
+		+li {
+			border-top: 1px solid $border-color;
+		}
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+
+	.attach_file {
+		display: inline-flex;
+		align-items: center;
+		gap: $size-15;
+		padding: $size-8 $size-10;
+	}
+}
+
+// 회의자료 목록
+.table_agenda {
+	&.fixed_header {
+		height: 100%;
+
+		table {
+			height: 100%;
+		}
+
+		tbody {
+			height: calc(100% - max(2.34375vw, 30px) - 1px);
+		}
+
+		th,
+		td {
+			&:nth-child(2) {
+				width: 43.8%;
+			}
+		}
+	}
+}
+
+.data_list {
+	display: flex;
+	gap: $size-5;
+
+	li {
+		flex: 0 0 19.2%;
+
+		&:nth-child(4) {
+			flex: 1;
+		}
+
+		&:nth-child(5) {
+			flex: 0 0 13.4%;
+		}
+	}
+
+	[class^="btn_data"] {
+		display: inline-flex;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		min-height: $size-32;
+		border: $size-2 solid transparent;
+		border-radius: $size-4;
+		color:  $white;
+		font-weight: 500;
+		font-size: $size-12;
+		text-align: left;
+
+		.v_ico {
+			width: $size-24;
+			height: 100%;
+		}
+
+		span {
+			display: flex;
+			align-items: center;
+			flex: 1;
+			height: 100%;
+			padding: $size-2 $size-4;
+			line-height: $size-12;
+		}
+	}
+
+	.btn_data1 {
+		border-color: #0765E1;
+
+		.v_ico {
+			background-image: url(#{$url-img-common}/ico_data1.svg);
+		}
+
+		span {
+			background-color: #0765E1;
+		}
+	}
+
+	.btn_data2 {
+		border-color: #4091FD;
+
+		.v_ico {
+			background-image: url(#{$url-img-common}/ico_data2.svg);
+		}
+
+		span {
+			background-color: #4091FD;
+		}
+	}
+
+	.btn_data3 {
+		border-color: #00B4E5;
+
+		.v_ico {
+			background-image: url(#{$url-img-common}/ico_data3.svg);
+		}
+
+		span {
+			background-color: #00B4E5;
+		}
+	}
+
+	.btn_data4 {
+		border-color: #00BF99;
+
+		.v_ico {
+			background-image: url(#{$url-img-common}/ico_data4.svg);
+		}
+
+		span {
+			background-color: #00BF99;
+		}
+	}
+
+	.btn_data5 {
+		border-color: #F89844;
+
+		.v_ico {
+			background-image: url(#{$url-img-common}/ico_data5.svg);
+		}
+
+		span {
+			background-color: #F89844;
+		}
+	}
+}
+
+// 발언/질의
+#v_sidebar {
+	&.speak_on {
+		.sidebar_inner {
+			gap: max(1.389vh, 10px);
+			padding-top: $size-25;
+			background-color: transparent;
+		}
+	}
+
+	.btn_wrap {
+		flex: 0 0 auto;
+	}
+
+	.timer_wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 auto;
+		height: max(14.8149vh, 138px);
+		color: $white;
+		font-weight: 600;
+		font-size: $font-size-8;
+		background: url(#{$url-img}/content/bg_timer.svg) no-repeat 50% 50%;
+		background-size: cover;
+	}
+
+	.person_wrap {
+		flex: 1;
+		padding: $size-20;
+		color: $black;
+		background-color: $white;
+		overflow: hidden;
+
+		.person_inner {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+
+		.person_tit {
+			display: flex;
+			align-items: center;
+			gap: $size-5;
+			flex: 0 0 auto;
+			margin-bottom: $size-10;
+			font-weight: 600;
+			font-size: $font-size-5;
+
+			.v_ico {
+				flex: 0 0 auto;
+			}
+		}
+
+		.person_list {
+			flex: 1;
+			margin-right: -0.520833vw;
+			padding-right: $size-5;
+			overflow-y: auto;
+
+			li {
+				padding-left: $size-19;
+				text-indent: -0.989583vw;
+
+				+li {
+					margin-top: $size-10;
+				}
+			}
+		}
+
+		.btn_group {
+			flex: 0 0 auto;
+			margin-top: $size-18;
+		}
+	}
+}
+
+// 기능
+.table_member {
+	&.fixed_header {
+		height: 100%;
+
+		table {
+			height: 100%;
+		}
+
+		tbody {
+			height: calc(100% - max(2.34375vw, 30px) - 1px);
+		}
+
+		th,
+		td {
+			&:nth-child(2) {
+				width: 16.9%;
+			}
+
+			&:nth-child(3) {
+				width: 12.9%;
+			}
+		}
+	}
+}
+
+.vote_wrap {
+	height: 100%;
+
+	>div {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.left {
+		flex: 0 0 49.333333%;
+		max-width: 49.333333%;
+
+		>.v_box {
+			flex: 1;
+		}
+	}
+
+	.vote_result {
+		flex: 0 0 auto;
+		margin-top: $size-40;
+	}
+
+	.right {
+		flex: 0 0 48.666666%;
+		max-width: 48.666666%;
+	}
+
+	.table_list {
+		thead {
+			th {
+				height: $size-40;
+			}
+		}
+
+		tbody {
+			td {
+				height: $size-50;
+			}
+		}
+	}
+}
+
+.table_vote1 {
+	&.fixed_header {
+		height: 100%;
+
+		table {
+			height: 100%;
+		}
+
+		tbody {
+			height: calc(100% - max(4.427083vw, 57px) - 1px);
+		}
+
+		th,
+		td {
+			&:nth-child(1) {
+				width: 10%;
+			}
+
+			&:nth-child(2) {
+				width: 15.2%;
+			}
+
+			&:nth-child(4) {
+				width: 15.5%;
+			}
+		}
+	}
+}
+
+.info_list {
+	li {
+		font-weight: 600;
+		font-size: $font-size-2;
+		line-height: $size-20;
+
+		strong {
+			display: inline-block;
+			position: relative;
+			min-width: max(9.010417vw, 115px);
+			margin-right: $size-20;
+			padding-right: $size-20;
+
+			&:after {
+				content: '';
+				display: inline-block;
+				position: absolute;
+				top: $size-4;
+				right: 0;
+				width: 1px;
+				height: $size-12;
+				background-color: #A8B3BD;
+			}
+		}
+
+		+li {
+			margin-top: $size-10;
+		}
+	}
+}
+
+.table_vote2 {
+	&.fixed_header {
+		height: 100%;
+
+		table {
+			height: 100%;
+		}
+
+		tbody {
+			height: calc(100% - max(2.083333vw, 27px) - 1px);
+		}
+
+		th,
+		td {
+			&:nth-child(1) {
+				width: 60%;
+			}
+		}
+	}
+}
+
+// 정보
+.guide_wrap {
+	p,
+	ul {
+		line-height: $size-22;
+
+		+p,
+		+ul {
+			margin-top: $size-10;
+		}
+	}
+
+	ul {
+		li {
+			>ul,
+			+li {
+				margin-top: $size-10;
+			}
+		}
+	}
+
+	.guide_tit1 {
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		gap: $size-10;
+		margin-bottom: $size-30;
+		color: $black;
+		font-weight: 600;
+		font-size: $font-size-7;
+	}
+
+	.guide_tit2 {
+		margin-bottom: $size-30;
+		color: $black;
+		font-weight: 600;
+		font-size: $font-size-6;
+		text-align: center;
+	}
+
+	.guide_list1 {
+		li {
+			display: flex;
+			gap: $size-10;
+
+			strong {
+				display: block;
+				min-width: $size-70;
+				font-weight: 500;
+				color: $black;
+				letter-spacing: -0.03em;
+			}
+		}
+	}
+
+	.guide_list2 {
+		>li {
+			>strong {
+				color: $black;
+			}
+
+			>ul {
+				padding-left: $size-20;
+				
+				li {
+					strong {
+						font-weight: 500;
+					}
+				}
+			}
+		}	
+	}
+}
+
+// 메시지
+.content_ctrl {
+	display: flex;
+	justify-content: space-between;
+	gap: $size-30;
+
+	.left {
+		flex: 1;
+		margin-right: auto;
+	}
+
+	.right {
+		flex: 0 0 auto;
+		margin-left: auto;
+	}
+}
+
+.table_message {
+	&.fixed_header {
+		height: 100%;
+
+		table {
+			height: 100%;
+		}
+
+		tbody {
+			height: calc(100% - max(2.34375vw, 30px) - 1px);
+		}
+
+		th,
+		td {
+			&:nth-child(1) {
+				width: 4.5%;
+			}
+
+			&:nth-child(3) {
+				width: 16.9%;
+			}
+
+			&:nth-child(4) {
+				width: 12.9%;
+			}
+		}
+	}
+}
+
+.form_col {
+	&.message_wrap {
+		height: 100%;
+
+		.form_control {
+			&[readonly] {
+				color: $black;
+				background-color: $white;
+				cursor: default;
+		
+				&::-ms-value {
+					color: $black !important;
+				}
+			}
+		}
+
+		>.input_item {
+			flex: 0 0 auto;
+
+			>.form_label {
+				display: flex;
+				align-items: center;
+				height: $size-36;
+			}
+
+			>.input_group {
+				width: 100%;
+			}
+
+			&:last-child {
+				flex: 1;
+
+				.form_control {
+					height: 100%;
+				}
+			}
+		}
+
+		.text_area {
+			width: 100%;
+
+			.text_count {
+				position: relative;
+				margin: -1.302083vw 0.520833vw 0 0;
+				color: #A8B3BD;
+				font-size: $size-13;
+				letter-spacing: -0.03em;
+				text-align: right;
+				line-height: $size-16;
+			}
+		}
+
+		.recipient_area {
+			position: relative;
+			width: 100%;
+
+			.form_control {
+				color: transparent;
+			}
+
+			.text_box {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				padding: 0 $size-15;
+				border-radius: $size-6;
+				color: $black;
+				font-size: $font-size-1;
+				line-height: $size-36;
+
+				&:focus {
+					outline: 1px solid $primary;
+					outline-offset: -1px;
+				}
+			}
+		}
+	}
+}
+
+// 의원목록 팝업
+.popup_message {
+	.table_check {
+		&.fixed_header {
+			height: 33.707vh;
+	
+			table {
+				height: 100%;
+			}
+	
+			tbody {
+				height: calc(100% - max(2.34375vw, 33px) - 1px);
+
+				td {
+					font-size: $font-size-1;
+				}
+			}
+	
+			th,
+			td {
+				&:nth-child(1) {
+					width: 7.7%;
+				}
+
+				&:nth-child(3),
+				&:nth-child(4) {
+					width: 20.8%;
+				}
+			}
+		}
+	}
+}
+
+// 언어선택 팝업
+.choice_list {
+	display: flex;
+
+	li {
+		flex: 1;
+
+		+li {
+			border-left: 1px solid #B6D5FF;
+		}
+	}
+
+	.btn_lang {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: $size-20;
+		width: 100%;
+
+		span {
+			color: $black;
+			font-weight: 600;
+			font-size: $font-size-5;
+		}
+	}
+
+	.choice_cont {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: $size-20;
+		width: 100%;
+	}
+}
+
+// 인증 팝업
+.popup_certify {
+	.popup_tit {
+		font-size: $font-size-7;
+	}
+}
+
+.certify_wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: $size-20;
+
+	.text_msg {
+		display: inline-flex;
+		align-items: center;
+		gap: $size-5;
+		color: $invalid;
+	}
+}
+
+// 비밀번호인증 팝업
+.password_form {
+	.input_item {
+		position: relative;
+
+		.form_control {
+			height: $size-60;
+			padding-right: $size-50;
+			border-width: $size-2;
+			border-color: #7F8A94;
+			font-size: $font-size-6;
+
+			&[readonly] {
+				color: $black;
+				background-color: $white;
+			}
+
+			&.is_invalid {
+				background-color: $white;
+				background-image: none;
+			}
+		}
+
+		.input_ctrl {
+			position: absolute;
+			top: 50%;
+			right: $size-20;
+			transform: translateY(-50%);
+		}
+
+		.btn_show {
+			&.on {
+				.ico_eye {
+					background-image: url(#{$url-img-common}/ico_eye_slash.svg);
+				}
+			}
+		}
+	}
+
+	.text_invalid {
+		+.Keypad_area {
+			margin-top: $size-25 !important;
+		}
+	}
+}
+
+.Keypad_area {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: $size-20;
+
+	.btn_key {
+		width: 100%;
+		height: $size-80;
+		border-radius: $size-10;
+		overflow: hidden;
+
+		.v_ico {
+			width: 100%;
+			height: 100%;
+		}
+
+		.ico_key_1 {
+			background-image: url(#{$url-img-common}/ico_key_1.svg);
+		}
+
+		.ico_key_2 {
+			background-image: url(#{$url-img-common}/ico_key_2.svg);
+		}
+
+		.ico_key_3 {
+			background-image: url(#{$url-img-common}/ico_key_3.svg);
+		}
+
+		.ico_key_4 {
+			background-image: url(#{$url-img-common}/ico_key_4.svg);
+		}
+
+		.ico_key_5 {
+			background-image: url(#{$url-img-common}/ico_key_5.svg);
+		}
+
+		.ico_key_6 {
+			background-image: url(#{$url-img-common}/ico_key_6.svg);
+		}
+
+		.ico_key_7 {
+			background-image: url(#{$url-img-common}/ico_key_7.svg);
+		}
+
+		.ico_key_8 {
+			background-image: url(#{$url-img-common}/ico_key_8.svg);
+		}
+
+		.ico_key_9 {
+			background-image: url(#{$url-img-common}/ico_key_9.svg);
+		}
+
+		.ico_key_0 {
+			background-image: url(#{$url-img-common}/ico_key_0.svg);
+		}
+
+		.ico_key_delete {
+			background-image: url(#{$url-img-common}/ico_key_delete.svg);
+		}
+
+		.ico_key_enter {
+			background-image: url(#{$url-img-common}/ico_key_enter.svg);
+		}
+	}
+}

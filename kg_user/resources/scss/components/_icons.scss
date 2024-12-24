@@ -1,0 +1,57 @@
+//
+// Icons
+// 
+
+.v_ico {
+	@include ir;
+}
+
+/* 컨텐츠 아이콘 */
+// 20px
+@include ico('file_word', 1.041667vw, 1.041667vw, 13px, 13px);
+@include ico('file_etc', 1.041667vw, 1.041667vw, 13px, 13px);
+@include ico('file_pdf', 1.041667vw, 1.041667vw, 13px, 13px);
+@include ico('file_xlsx', 1.041667vw, 1.041667vw, 13px, 13px);
+@include ico('file_zip', 1.041667vw, 1.041667vw, 13px, 13px);
+@include ico('file_img', 1.041667vw, 1.041667vw, 13px, 13px);
+
+// 24px
+@include ico('back', 1.25vw, 1.25vw, 16px, 16px);
+@include ico('send', 1.25vw, 1.25vw, 16px, 16px);
+@include ico('search_white', 1.25vw, 1.25vw, 16px, 16px);
+@include ico('error', 1.25vw, 1.25vw, 16px, 16px);
+@include ico('eye', 1.25vw, 1.25vw, 16px, 16px);
+
+// 32px
+@include ico('speaker', 1.666667vw, 1.666667vw, 21px, 21px);
+@include ico('shortcut1', 1.666667vw, 1.666667vw, 21px, 21px);
+@include ico('shortcut2', 1.666667vw, 1.666667vw, 21px, 21px);
+@include ico('shortcut3', 1.666667vw, 1.666667vw, 21px, 21px);
+@include ico('shortcut4', 1.666667vw, 1.666667vw, 21px, 21px);
+@include ico('close', 1.666667vw, 1.666667vw, 21px, 21px);
+
+// 40px
+@include ico('menu1', 2.083333vw, 2.083333vw, 27px, 27px);
+@include ico('menu2', 2.083333vw, 2.083333vw, 27px, 27px);
+@include ico('menu3', 2.083333vw, 2.083333vw, 27px, 27px);
+@include ico('question', 2.083333vw, 2.083333vw, 27px, 27px);
+@include ico('remark', 2.083333vw, 2.083333vw, 27px, 27px);
+
+// 50px
+@include ico('login', 2.604167vw, 2.604167vw, 33px, 33px);
+@include ico('logout', 2.604167vw, 2.604167vw, 33px, 33px);
+
+// 56px
+@include ico('info_rule', 2.916667vw, 2.916667vw, 37px, 37px);
+@include ico('info_law', 2.916667vw, 2.916667vw, 37px, 37px);
+@include ico('info_help', 2.916667vw, 2.916667vw, 37px, 37px);
+@include ico('flag1', 2.916667vw, 2.916667vw, 37px, 37px);
+@include ico('flag2', 2.916667vw, 2.916667vw, 37px, 37px);
+@include ico('login_fingerprint', 2.916667vw, 2.916667vw, 37px, 37px);
+@include ico('login_password', 2.916667vw, 2.916667vw, 37px, 37px);
+
+// 180px
+@include ico('confirm', 9.375vw, 9.375vw, 120px, 120px);
+
+// 210px
+@include ico('regist', 10.9375vw, 10.9375vw, 140px, 140px);
