@@ -238,7 +238,7 @@
 }
 #v_sidebar .lnb_area .depth1 > li.on > a {
   color: #fff;
-  font-weight: 600;
+  text-shadow: 0 0 0.05rem #fff;
   background-color: #0094D3;
 }
 #v_sidebar .lnb_area .depth1 > li.on > a:after {
@@ -274,12 +274,97 @@
 #v_sidebar .lnb_area .depth2 li:first-child {
   margin-top: 0;
 }
-#v_sidebar .lnb_area .depth2 li.on a {
+#v_sidebar .lnb_area .depth2 li.on a, #v_sidebar .lnb_area .depth2 li:hover a {
   color: #0094D3;
-  font-weight: 600;
+  text-shadow: 0 0 0.06rem #0094D3;
 }
-#v_sidebar .lnb_area .depth2 li.on a:before {
+#v_sidebar .lnb_area .depth2 li.on a:before, #v_sidebar .lnb_area .depth2 li:hover a:before {
   background-image: url(../images/common/ico_chevron_right_sm_primary.png);
+}
+#v_sidebar .todo_area {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1.5rem 1rem 0.4rem;
+}
+#v_sidebar .todo_area .todo_item .todo_tit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid #DCE0E5;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  background-color: #F9FAFB;
+}
+#v_sidebar .todo_area .todo_item .todo_tit > span {
+  margin-right: auto;
+  line-height: 2.2rem;
+}
+#v_sidebar .todo_area .todo_item .todo_tit.on {
+  border-color: #A4E1FB;
+  background-color: #F5FBFE;
+}
+#v_sidebar .todo_area .todo_item .btn_more {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-left: auto;
+  padding: 0.3rem 0;
+  color: #66707A;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  letter-spacing: -0.03em;
+}
+#v_sidebar .todo_area .todo_item .btn_more .v_ico {
+  margin-right: 0.2rem;
+}
+#v_sidebar .todo_area .todo_item .todo_list {
+  padding: 1rem 5.7rem 1.5rem 2rem;
+}
+#v_sidebar .todo_area .todo_item .todo_list li {
+  margin-top: 1rem;
+}
+#v_sidebar .todo_area .todo_item .todo_list li a {
+  display: block;
+  position: relative;
+  padding-left: 1.4rem;
+  color: #525960;
+  font-size: 1.5rem;
+  letter-spacing: -0.03em;
+  line-height: 1.5rem;
+}
+#v_sidebar .todo_area .todo_item .todo_list li a:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: url(../images/common/ico_chevron_right_sm.png) no-repeat 50% 50%;
+}
+#v_sidebar .todo_area .todo_item .todo_list li:first-child {
+  margin-top: 0;
+}
+#v_sidebar .todo_area .todo_item .todo_list li.on a, #v_sidebar .todo_area .todo_item .todo_list li:hover a {
+  color: #0094D3;
+  text-shadow: 0 0 0.06rem #0094D3;
+}
+#v_sidebar .todo_area .todo_item .todo_list li.on a:before, #v_sidebar .todo_area .todo_item .todo_list li:hover a:before {
+  background-image: url(../images/common/ico_chevron_right_sm_primary.png);
+}
+#v_sidebar .todo_area .todo_item + .todo_item {
+  margin-top: 1rem;
 }
 #v_sidebar .shortcut_wrap {
   display: -webkit-box;

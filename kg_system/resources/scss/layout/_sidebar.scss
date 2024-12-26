@@ -71,7 +71,7 @@
 				&.on {
 					>a {
 						color: $white;
-						font-weight: 600;
+						text-shadow: 0 0 .05rem $white;
 						background-color: $primary;
 
 						&:after {
@@ -116,16 +116,111 @@
 					margin-top: 0;
 				}
 
-				&.on {
+				&.on,
+				&:hover {
 					a {
 						color: $primary;
-						font-weight: 600;
+						text-shadow: 0 0 .06rem $primary;
 						
 						&:before {
 							background-image: url(#{$url-img-common}/ico_chevron_right_sm_primary.png);
 						}
 					}
 				}
+			}
+		}
+	}
+
+	.todo_area {
+		flex: 1;
+		padding: 1.5rem 1rem .4rem;
+
+		.todo_item {
+			.todo_tit {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 1rem;
+				margin-bottom: .5rem;
+				padding: 1.2rem 1.5rem;
+				border-bottom: 1px solid $border-color;
+				font-weight: 500;
+				font-size: 1.6rem;
+				line-height: 2.2rem;
+				background-color: #F9FAFB;
+
+				>span {
+					margin-right: auto;
+					line-height: 2.2rem;
+				}
+
+				&.on {
+					border-color: #A4E1FB;
+					background-color: #F5FBFE;
+				}
+			}
+	
+			.btn_more {
+				flex: 0 0 auto;
+				margin-left: auto;
+				padding: .3rem 0;
+				color: $gray;
+				font-weight: 400;
+				font-size: 1.3rem;
+				line-height: 1.3rem;
+				letter-spacing: -.03em;
+
+				.v_ico {
+					margin-right: .2rem;
+				}
+			}
+
+			.todo_list {
+				padding: 1rem 5.7rem 1.5rem 2rem;
+	
+				li {
+					margin-top: 1rem;
+	
+					a {
+						display: block;
+						position: relative;
+						padding-left: 1.4rem;
+						color: #525960;
+						font-size: 1.5rem;
+						letter-spacing: -.03em;
+						line-height: 1.5rem;
+						
+						&:before {
+							content: '';
+							position: absolute;
+							top: 1px;
+							left: 0;
+							width: 1.2rem;
+							height: 1.2rem;
+							background: url(#{$url-img-common}/ico_chevron_right_sm.png) no-repeat 50% 50%;
+						}
+					}
+	
+					&:first-child {
+						margin-top: 0;
+					}
+	
+					&.on,
+					&:hover {
+						a {
+							color: $primary;
+							text-shadow: 0 0 .06rem $primary;
+							
+							&:before {
+								background-image: url(#{$url-img-common}/ico_chevron_right_sm_primary.png);
+							}
+						}
+					}
+				}
+			}
+
+			+.todo_item {
+				margin-top: 1rem;
 			}
 		}
 	}

@@ -1653,6 +1653,13 @@ u {
   background-image: url("../images/common/ico_plus_white.png");
 }
 
+.ico_plus_gray {
+  width: 1.6rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  background-image: url("../images/common/ico_plus_gray.png");
+}
+
 .ico_move_down_primary {
   width: 2.1rem;
   height: 2rem;
@@ -2836,7 +2843,7 @@ textarea.form_control {
 }
 .tab_list li.on a {
   color: #0094D3;
-  text-shadow: 0 0 0.05rem #0094D3;
+  text-shadow: 0 0 0.02rem #0094D3;
 }
 .tab_list li.on a:after {
   content: "";
