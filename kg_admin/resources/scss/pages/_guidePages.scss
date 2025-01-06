@@ -1,0 +1,104 @@
+/* UI 컴포넌트 가이드 */
+$guide-color: #222;
+
+@mixin gutter($size, $gutter) {
+	.gutter-#{$size} {
+		margin-left: $gutter * -0.5;
+		margin-right: $gutter * -0.5;
+
+		.col {
+			padding: 0 $gutter * 0.5;
+		}
+
+		&.row-auto {
+			width: calc(100% + #{$gutter * 2});
+		}
+	}
+}
+
+.guide-section {
+	margin: 40px 0 16px;
+
+	p {
+		line-height: 1.5;
+	}
+
+	.tit1 {
+		margin-bottom: 20px;
+	}
+}
+
+.title-guide {
+	font-size: 30px;
+	letter-spacing: -0.03em;
+	color: $guide-color;
+	margin-bottom: 30px;
+	padding: 15px 0 15px 15px;
+	border-top: 2px solid rgba($guide-color, .8);
+	border-bottom: 1px dashed rgba($guide-color, .2);
+	font-weight: 500;
+
+	small {
+		font-size: 25px;
+		margin-left: 10px;
+		color: $primary;
+	}
+}
+
+.box-tbd {
+	text-align: center;
+	font-size: .30rem;
+	color: $white;
+	line-height: 1.00rem;
+
+	&:after {
+		content: '디자인 수급예정';
+	}
+}
+
+.bg-setting {
+	display: flex;
+	text-align: center;
+	flex-wrap: wrap;
+	margin: -5px;
+
+	span {
+		flex: 0 0 auto;
+		margin: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 14px;
+		min-width: 120px;
+		line-height: 40px;
+		border-radius: 10px;
+		vertical-align: middle;
+	}
+}
+
+.nodrag {
+	-webkit-user-select: none;  
+	-moz-user-select: none;  
+	-ms-user-select: none;  
+	-o-user-select: none;  
+	user-select: none;
+}
+
+.content-row2 {
+	overflow: hidden;
+
+	>.inner {
+		display: flex;
+		margin: -0.5 * $spacing;
+
+		>.col-item {
+			flex: 1 1 50%;
+			margin: $spacing * 0.5;
+		}
+
+		>.col-item-fit {
+			flex: 0 0 auto;
+			margin: $spacing * 0.5;
+		}
+	}
+}

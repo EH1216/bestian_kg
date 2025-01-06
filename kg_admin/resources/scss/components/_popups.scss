@@ -1,0 +1,170 @@
+
+/* 팝업 */
+
+// 레이어 팝업
+.layer_open {
+	overflow-y: hidden;
+}
+
+.layer_popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(#000, .6);
+
+	.popup_inner {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		z-index: 1100;
+		width: 140rem;
+		height: auto;
+		min-height: 63rem;
+		margin-top: 0;
+		border-radius: 2rem;
+		overflow: hidden;
+		transition-duration: .3s;
+		transition-property: transform;
+	}
+
+	&.hide {
+		opacity: 0;
+		visibility: hidden;
+
+		.popup_inner {
+			transform: translateY(-30px);
+		}
+	}
+
+	&.show {
+		opacity: 1;
+		visibility: visible;
+
+		.popup_inner {
+			transform: translateY(0);
+		}
+	}
+
+	&.layer_sm {
+		.popup_inner {
+			width: 80rem;
+			min-height: 32rem;
+		}
+	}
+}
+
+.popup_header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 6rem;
+	padding: 0 5rem;
+	background-color: $primary;
+
+	.popup_tit {
+		color: $white;
+		font-weight: 600;
+		font-size: 2rem;
+	}
+}
+
+.popup_body {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding: 3rem 1rem 3rem 3rem;
+	background-color: $white;
+
+	.scroll_inner {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		max-height: calc(100vh - 30rem);
+		padding-right: 2rem;
+		overflow-y: auto;
+	}
+}
+
+.popup_cont {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	height: 100%;
+
+	.board_search {
+		padding: 0;
+		border: 0;
+		background-color: transparent;
+
+		.search_inner {
+			border-right: 0;
+			border-radius: 0;
+		}
+
+		.form_row {
+			>.input_item {
+				padding-right: 2rem;
+			}
+		}
+
+		.search_btn {
+			padding-left: 0;
+		}
+	}
+
+	.v_table {
+		.form_control {
+			&:not(textarea) {
+				height: 3.6rem;
+			}
+		}
+	}
+
+	.table_list {
+		tbody {
+			td {
+				height: 3.7rem;
+				padding: 1rem .7rem;
+			}
+		}
+
+		&.table_sm {
+			thead {
+				th {
+					font-weight: 600;
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+
+	.form_control {
+		&:not(textarea) {
+			height: 4rem;
+		}
+	}
+}
+
+.popup_footer {
+	flex: 0 0 auto;
+	padding-top: 3rem;
+
+	.btn_group {
+		justify-content: center;
+		margin-top: 0;
+	}
+}
+
+.popup_header~.btn_close_popup {
+	position: absolute;
+	top: 1rem;
+	right: 2rem;
+	width: 4rem;
+	height: 4rem;
+}

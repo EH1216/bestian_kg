@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>키르기스스탄 관리자용 프로그램</title>
+	<link rel="stylesheet" href="../resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script src="../resources/js/ui-common.js"></script>
+</head>
+
+<body>
+	<div class="v_wrapper">
+		<header id="v_header">
+			<div class="v_inner">
+				<h1 id="v_logo">20-й Конгресс</h1>
+				<nav id="v_gnb">
+					<ul class="gnb_list">
+						<li><a href="javascript:void(0)">Упр-е основной инф-ей</a></li>
+						<li class="on"><a href="javascript:void(0)">Упр-е заседаниями</a></li>
+						<li><a href="javascript:void(0)">Упр-е депутатами</a></li>
+						<li><a href="javascript:void(0)">Упр-е системой</a></li>
+					</ul>
+				</nav>
+				<div class="util_group">
+					<div class="util_item util_lang">
+						<label class="form_label">언어</label>
+						<div class="dropdown_menu">
+							<button type="button" class="dropdown_btn">ру́сский язы́к</button>
+							<div class="dropdown_cont">
+								<ul class="dropdown_list">
+									<li><button type="button" class="dropdown_item">Кыргыз</button></li>
+									<li><button type="button" class="dropdown_item">ру́сский язы́к</button></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="util_item util_ctrl">
+						<button type="button" class="v_btn btn_logout"><i class="v_ico ico_logout"></i></button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="v_container">
+			<div class="v_inner">
+				<div id="v_sidebar">
+					<div class="sidebar_inner">
+						<div class="lnb_area">
+							<h2 class="depth1_tit">회의정보관리</h2>
+							<ul class="depth2">
+								<li class="collapse"><a href="javascript:void(0)">회의관리</a>
+									<ul class="depth3">
+										<li><a href="javascript:void(0)">당회차 변경</a></li>
+										<li><a href="javascript:void(0)">의사일정 등록</a></li>
+									</ul>
+								</li>
+								<li class="collapse"><a href="javascript:void(0)">출결관리</a>
+									<ul class="depth3">
+										<li><a href="javascript:void(0)">회의별 출결정보</a></li>
+										<li><a href="javascript:void(0)">의원별 출결정보</a></li>
+									</ul>
+								</li>
+								<li class="collapse on"><a href="javascript:void(0)">투표관리</a>
+									<ul class="depth3">
+										<li><a href="javascript:void(0)">안건별 표결정보</a></li>
+										<li class="on"><a href="javascript:void(0)">의원별 표결정보</a></li>
+									</ul>
+								</li>
+								<li class="collapse"><a href="javascript:void(0)">등록관리</a>
+									<ul class="depth3">
+										<li><a href="javascript:void(0)">회의별 등록정보</a></li>
+									</ul>
+								</li>
+								<li><a href="javascript:void(0)">보고서</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div id="v_content">
+					<div class="content_util">
+						<div class="v_inner">
+							<div class="title_wrap">
+								<h3 class="content_tit">의원별 표결정보</h3>
+								<button type="button" class="v_btn btn_outline_primary btn_md">보고서</button>
+							</div>
+							<nav class="v_breadcrumb">
+								<ul class="path">
+									<li><i class="v_ico ico_home"></i></li>
+									<li>회의정보관리</li>
+									<li>투표관리</li>
+									<li>의원별 표결정보</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="content_body">
+						<div class="content_inner">
+							<!-- 본문 영역 -->
+							<div class="content_section">
+								<div class="board_search">
+									<div class="search_inner">
+										<div class="form_row">
+											<div class="input_item_fit">
+												<label class="form_label">대수</label>
+												<select class="form_control" style="width: 335px;">
+													<option>전체</option>
+												</select>
+											</div>
+											<div class="input_item_fit">
+												<label class="form_label">의원명</label>
+												<input type="text" class="form_control" style="width: 322px;">
+											</div>
+										</div>
+									</div>
+									<div class="search_btn">
+										<button type="button" class="v_btn btn_primary btn_md"><i class="v_ico ico_search_white"></i><span>조회</span></button>
+									</div>
+								</div>
+								<div class="v_table table_list fixed_header fixed_header_type9">
+									<table>
+										<colgroup>
+											<col style="width: 41.7%;">
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+											<col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">의원명</th>
+												<th scope="col">대수</th>
+												<th scope="col">찬성</th>
+												<th scope="col">반대</th>
+												<th scope="col">기권</th>
+												<th scope="col">불참</th>
+												<th scope="col">비고</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>АЙДАРОВА АЙГҮЛ АБДИСАЛАМОВНА</td>
+												<td>20</td>
+												<td>20</td>
+												<td>5</td>
+												<td>5</td>
+												<td>10</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>АЙДАРБЕКОВ ЧИНГИЗ АЗАМАТОВИЧ</td>
+												<td>20</td>
+												<td>35</td>
+												<td>2</td>
+												<td>5</td>
+												<td>5</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>АБАКИРОВ ЭЛЬДАР КУРМАНБЕКОВИЧ</td>
+												<td>20</td>
+												<td>10</td>
+												<td>10</td>
+												<td>15</td>
+												<td>15</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>АБДАЛИЕВ МЕЙКИНБЕК АКИМОВИЧ</td>
+												<td>20</td>
+												<td>15</td>
+												<td>8</td>
+												<td>4</td>
+												<td>10</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>АБДИБАЕВА АЙСАРАКАН НЫШАНОВНА</td>
+												<td>20</td>
+												<td>23</td>
+												<td>5</td>
+												<td>10</td>
+												<td>5</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>АЖИБАЕВ ЧЫҢГЫЗ ИЛЬЯСКОЖОЕВИЧ</td>
+												<td>20</td>
+												<td>19</td>
+												<td>4</td>
+												<td>0</td>
+												<td>0</td>
+												<td>궐원</td>
+											</tr>
+											<tr>
+												<td>АЙДАРОВА АЙГҮЛ АБДИСАЛАМОВНА</td>
+												<td>20</td>
+												<td>20</td>
+												<td>5</td>
+												<td>5</td>
+												<td>10</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>АЙДАРБЕКОВ ЧИНГИЗ АЗАМАТОВИЧ</td>
+												<td>20</td>
+												<td>35</td>
+												<td>2</td>
+												<td>5</td>
+												<td>5</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>АБАКИРОВ ЭЛЬДАР КУРМАНБЕКОВИЧ</td>
+												<td>20</td>
+												<td>10</td>
+												<td>10</td>
+												<td>15</td>
+												<td>15</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>АБДАЛИЕВ МЕЙКИНБЕК АКИМОВИЧ</td>
+												<td>20</td>
+												<td>15</td>
+												<td>8</td>
+												<td>4</td>
+												<td>10</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- // 본문 영역 -->
+						</div>
+					</div>
+				</div>
+
+				<div id="v_shortcut">
+					<div class="v_inner">
+						<h2 class="shortcut_tit"><span>Быстрый доступ</span></h2>
+						<ul class="shortcut_list">
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut1"></i><span>Голосование</span></a></li>
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut2"></i><span>Выступление/Вопросы</span></a></li>
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut3"></i><span>Регистрация</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="v_board">
+			<div class="v_inner">
+				<h2 class="board_tit"><span>Табло</span><i class="v_ico ico_arr_right_white"></i></h2>
+				<ul class="board_list">
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board1"></i><span>Голосование</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board2"></i><span>Выступление</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board3"></i><span>Вопросы</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board4"></i><span>Регистрация</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board5"></i><span>Таймер</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board6"></i><span>Заставка</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+/* default */
+*,
+:before,
+:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	color: $default;
+	font-weight: 400;
+	font-size: 1.4rem;
+	font-family: $font-family-base;
+	line-height: normal;
+	background-color: #E7EBEE;
+	overflow-y: hidden;
+
+	// 영역 밖으로 넘치는 단어 개행
+	word-wrap: break-word;
+
+	// 글자 단위 개행
+	word-break: keep-all;
+}
+
+header,
+section,
+article,
+aside,
+footer,
+nav {
+	display: block;
+}
+
+fieldset {
+	display: block;
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+img {
+	max-width: 100%;
+	border: 0;
+}
+
+ul,
+li,
+ol {
+	list-style: none;
+	// 엣지 리스트 버그 해결
+	// list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+}
+
+dl,
+ol,
+ul {
+	margin-bottom: 0;
+}
+
+ul,
+ol {
+	padding-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dd {
+	margin: 0;
+}
+
+strong {
+	font-weight: 600;
+}
+
+p {
+	margin-bottom: 0;
+}
+
+a,
+select,
+button,
+input,
+textarea {
+	font-family: inherit;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button,
+input[type=submit] {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	color: inherit;
+	cursor: pointer;
+	background: transparent;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+.blind {
+	position: absolute;
+	display: block;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+}
+
+caption.blind {
+	position: static;
+	width: auto;
+	height: 0;
+}
+
+*::-webkit-scrollbar {
+	width: .5rem;
+	height: .6rem;
+
+	&-button {
+		width: 0;
+		height: 0;
+	}
+
+	&-track {
+		background: transparent;
+	}
+
+	&-thumb {
+		border-radius: .6rem;
+		background: #A8B3BD;
+	}
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>키르기스스탄 관리자용 프로그램</title>
+	<link rel="stylesheet" href="../resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script src="../resources/js/ui-common.js"></script>
+</head>
+
+<body>
+	<div class="v_wrapper">
+		<header id="v_header">
+			<div class="v_inner">
+				<h1 id="v_logo">20-й Конгресс</h1>
+				<nav id="v_gnb">
+					<ul class="gnb_list">
+						<li class="on"><a href="javascript:void(0)">Упр-е основной инф-ей</a></li>
+						<li><a href="javascript:void(0)">Упр-е заседаниями</a></li>
+						<li><a href="javascript:void(0)">Упр-е депутатами</a></li>
+						<li><a href="javascript:void(0)">Упр-е системой</a></li>
+					</ul>
+				</nav>
+				<div class="util_group">
+					<div class="util_item util_lang">
+						<label class="form_label">언어</label>
+						<div class="dropdown_menu">
+							<button type="button" class="dropdown_btn">ру́сский язы́к</button>
+							<div class="dropdown_cont">
+								<ul class="dropdown_list">
+									<li><button type="button" class="dropdown_item">Кыргыз</button></li>
+									<li><button type="button" class="dropdown_item">ру́сский язы́к</button></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="util_item util_ctrl">
+						<button type="button" class="v_btn btn_logout"><i class="v_ico ico_logout"></i></button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="v_container">
+			<div class="v_inner">
+				<div id="v_sidebar">
+					<div class="sidebar_inner">
+						<div class="lnb_area">
+							<h2 class="depth1_tit">시스템관리</h2>
+							<ul class="depth2">
+								<li><a href="javascript:void(0)">시스템관리</a>
+									<ul class="depth3">
+										<li><a href="javascript:void(0)">공통코드관리</a></li>
+										<li><a href="javascript:void(0)">운영자관리</a></li>
+										<li><a href="javascript:void(0)">공지사항 관리</a></li>
+										<li><a href="javascript:void(0)">메시지관리</a></li>
+									</ul>
+								</li>
+								<li class="collapse"><a href="javascript:void(0)">장비정보관리</a>
+									<ul class="depth3">
+										<li><a href="javascript:void(0)">좌석위치관리</a></li>
+									</ul>
+								</li>
+								<li class="collapse on"><a href="javascript:void(0)">회의배경관리</a>
+									<ul class="depth3">
+										<li class="on"><a href="javascript:void(0)">회의배경관리</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div id="v_content">
+					<div class="content_util">
+						<div class="v_inner">
+							<div class="title_wrap">
+								<h3 class="content_tit">회의배경관리</h3>
+							</div>
+							<nav class="v_breadcrumb">
+								<ul class="path">
+									<li><i class="v_ico ico_home"></i></li>
+									<li>시스템관리</li>
+									<li>회의배경관리</li>
+									<li>회의배경관리</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="content_body">
+						<div class="content_inner">
+							<!-- 본문 영역 -->
+							<div class="content_section">
+								<h4 class="v_tit1">제 20대 386회 1차 본회의 ( 2024.07.01)</h4>
+								<div class="background_list">
+									<div class="background_item">
+										<!-- label for와 input id 매칭 필수 -->
+										<span class="check_item">
+											<input type="radio" name="inputRadio" id="inputRadio1">
+											<label for="inputRadio1">
+												<img src="../resources/images/content/img_background1.jpg" alt="">
+											</label>
+										</span>
+									</div>
+									<div class="background_item">
+										<span class="check_item">
+											<input type="radio" name="inputRadio" id="inputRadio2">
+											<label for="inputRadio2">
+												<img src="../resources/images/content/img_background2.jpg" alt="">
+											</label>
+										</span>
+									</div>
+									<div class="background_item">
+										<span class="check_item">
+											<input type="radio" name="inputRadio" id="inputRadio3">
+											<label for="inputRadio3">
+												<img src="../resources/images/content/img_background3.jpg" alt="">
+											</label>
+										</span>
+									</div>
+									<div class="background_item">
+										<span class="check_item">
+											<input type="radio" name="inputRadio" id="inputRadio4">
+											<label for="inputRadio4">
+												<img src="../resources/images/content/img_background4.jpg" alt="">
+											</label>
+										</span>
+									</div>
+									<div class="background_item">
+										<span class="check_item">
+											<input type="radio" name="inputRadio" id="inputRadio5">
+											<label for="inputRadio5">
+												<img src="../resources/images/content/img_background5.jpg" alt="">
+											</label>
+										</span>
+									</div>
+									<div class="background_item">
+										<span class="check_item">
+											<input type="radio" name="inputRadio" id="inputRadio6">
+											<label for="inputRadio6">
+												<img src="../resources/images/content/img_background6.jpg" alt="">
+											</label>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="btn_group_fixed">
+								<button type="button" class="v_btn btn_primary btn_md">저장</button>
+							</div>
+							<!-- // 본문 영역 -->
+						</div>
+					</div>
+				</div>
+
+				<div id="v_shortcut">
+					<div class="v_inner">
+						<h2 class="shortcut_tit"><span>Быстрый доступ</span></h2>
+						<ul class="shortcut_list">
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut1"></i><span>Голосование</span></a></li>
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut2"></i><span>Выступление/Вопросы</span></a></li>
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut3"></i><span>Регистрация</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="v_board">
+			<div class="v_inner">
+				<h2 class="board_tit"><span>Табло</span><i class="v_ico ico_arr_right_white"></i></h2>
+				<ul class="board_list">
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board1"></i><span>Голосование</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board2"></i><span>Выступление</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board3"></i><span>Вопросы</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board4"></i><span>Регистрация</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board5"></i><span>Таймер</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board6"></i><span>Заставка</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

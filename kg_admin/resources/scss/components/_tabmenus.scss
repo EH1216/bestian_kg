@@ -1,0 +1,132 @@
+/* 탭메뉴 */
+.tab_menu {
+	margin-bottom: 2rem;
+
+	// 마진 겹침 현상 해결
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+
+	@at-root .tab_list {
+		display: flex;
+		position: relative;
+		
+		&:after {
+			content: '';
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: 1px;
+			background-color: #E7EBEE;
+		}
+	
+		li {
+			flex: 1;
+
+	
+			a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				height: 4.5rem;
+				border-radius: 0;
+				color: $gray;
+				font-weight: 500;
+				font-size: 1.6rem;
+				letter-spacing: -.005em;
+				text-align: center;
+				transition: background-color .2s ease, text-shadow .2s ease;
+	
+				&.disabled {
+					color: #8E8E8E;
+					cursor: default;
+				}
+			}
+
+			&:not(.on) {
+				&:not(.disabled) {
+					a {
+						&:hover,
+						&:focus {
+							background-color: #f0f0f0;
+						}
+			
+						&:active {
+							background-color: #e0e0e0;
+						}
+					}
+				}
+			}
+	
+			&.on {
+				a {
+					color: $primary;
+					text-shadow: 0 0 .02rem $primary;
+
+					&:after {
+						content: '';
+						position: absolute;
+						bottom: 0;
+						right: 0;
+						left: 0;
+						width: 100%;
+						height: 2px;
+						background-color: $primary;
+						z-index: 10;
+					}
+				}
+			}
+		}
+	}
+
+	&.type2 {
+		.tab_list {
+			li {
+				flex: 0 0 auto;
+	
+				a {
+					padding: 0 3rem;
+				}
+			}
+		}
+		
+	}
+
+	&.type3 {
+		.tab_list {
+			li {
+				flex: 0 0 auto;
+
+				a {
+					height: 4rem;
+					padding: 0 3rem;
+					border: 1px solid $border-color;
+					font-size: 15px;
+				}
+
+				&.on {
+					position: relative;
+					z-index: 10;
+
+					a {
+						border-color: $primary;
+						border-bottom-color: $white;
+
+						&:after {
+							top: 0;
+							bottom: auto;
+						}
+					}
+				}
+
+				+li {
+					margin-left: -1px;
+				}
+			}
+		}
+	}
+}

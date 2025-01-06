@@ -1,0 +1,16 @@
+.v_wrapper {
+	display: flex;
+	flex-direction: column;
+	min-width: 155rem;
+}
+
+#v_container {
+	flex: 1;
+	max-height: calc(100vh - 12rem);
+	overflow: hidden;
+
+	>.v_inner {
+		display: flex;
+		height: 100%;
+	}
+}

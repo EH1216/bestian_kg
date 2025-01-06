@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>키르기스스탄 관리자용 프로그램</title>
+	<link rel="stylesheet" href="../resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script src="../resources/js/ui-common.js"></script>
+</head>
+
+<body>
+	<div class="v_wrapper">
+		<header id="v_header">
+			<div class="v_inner">
+				<h1 id="v_logo">20-й Конгресс</h1>
+				<nav id="v_gnb">
+					<ul class="gnb_list">
+						<li><a href="javascript:void(0)">Упр-е основной инф-ей</a></li>
+						<li><a href="javascript:void(0)">Упр-е заседаниями</a></li>
+						<li class="on"><a href="javascript:void(0)">Упр-е депутатами</a></li>
+						<li><a href="javascript:void(0)">Упр-е системой</a></li>
+					</ul>
+				</nav>
+				<div class="util_group">
+					<div class="util_item util_lang">
+						<label class="form_label">언어</label>
+						<div class="dropdown_menu">
+							<button type="button" class="dropdown_btn">ру́сский язы́к</button>
+							<div class="dropdown_cont">
+								<ul class="dropdown_list">
+									<li><button type="button" class="dropdown_item">Кыргыз</button></li>
+									<li><button type="button" class="dropdown_item">ру́сский язы́к</button></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="util_item util_ctrl">
+						<button type="button" class="v_btn btn_logout"><i class="v_ico ico_logout"></i></button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="v_container">
+			<div class="v_inner">
+				<div id="v_sidebar">
+					<div class="sidebar_inner">
+						<div class="lnb_area">
+							<h2 class="depth1_tit">의원정보관리</h2>
+							<ul class="depth2">
+								<li class="collapse on"><a href="javascript:void(0)">의원정보관리</a>
+									<ul class="depth3">
+										<li><a href="javascript:void(0)">의원정보관리</a></li>
+										<li class="on"><a href="javascript:void(0)">정당정보관리</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div id="v_content">
+					<div class="content_util">
+						<div class="v_inner">
+							<div class="title_wrap">
+								<h3 class="content_tit">정당정보관리</h3>
+							</div>
+							<nav class="v_breadcrumb">
+								<ul class="path">
+									<li><i class="v_ico ico_home"></i></li>
+									<li>의원정보관리</li>
+									<li>의원정보관리</li>
+									<li>정당정보관리</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="content_body">
+						<div class="content_inner">
+							<!-- 본문 영역 -->
+							<div class="content_section">
+								<h4 class="v_tit2">정당정보</h4>
+								<div class="form_row type2">
+									<div class="input_item">
+										<label class="form_label">정당명(키르키즈어)</label>
+										<input type="text" class="form_control full" value="Ата-Мекен">
+									</div>
+									<div class="input_item">
+										<label class="form_label">정당명(러시아어)</label>
+										<input type="text" class="form_control full" value="Ата-Мекен">
+									</div>
+								</div>
+								<div class="form_row type2">
+									<div class="input_item">
+										<label class="form_label">리더</label>
+										<select class="form_control full">
+											<option>нет</option>
+										</select>
+									</div>
+									<div class="input_item">
+										<label class="form_label">리더 대행</label>
+										<select class="form_control full">
+											<option>нет</option>
+										</select>
+									</div>
+								</div>
+								<h4 class="v_tit2 mt_8">정당 이미지</h4>
+								<div class="party_list">
+									<div class="party_item">
+										<strong class="party_tit">로그인</strong>
+										<div class="img_area">
+											<img src="../resources/images/content/img_party.png" alt="">
+										</div>
+										<div class="btn_group">
+											<button type="button" class="v_btn btn_outline_primary btn_xs">이미지 업로드</button>
+										</div>
+									</div>
+									<div class="party_item">
+										<strong class="party_tit">투표완료</strong>
+										<div class="img_area">
+											<img src="../resources/images/content/img_party.png" alt="">
+										</div>
+										<div class="btn_group">
+											<button type="button" class="v_btn btn_outline_primary btn_xs">이미지 업로드</button>
+										</div>
+									</div>
+									<div class="party_item">
+										<strong class="party_tit">미투표</strong>
+										<div class="img_area">
+											<img src="../resources/images/content/img_party.png" alt="">
+										</div>
+										<div class="btn_group">
+											<button type="button" class="v_btn btn_outline_primary btn_xs">이미지 업로드</button>
+										</div>
+									</div>
+									<div class="party_item">
+										<strong class="party_tit">미등록</strong>
+										<div class="img_area">
+											<img src="../resources/images/content/img_party.png" alt="">
+										</div>
+										<div class="btn_group">
+											<button type="button" class="v_btn btn_outline_primary btn_xs">이미지 업로드</button>
+										</div>
+									</div>
+									<div class="party_item">
+										<strong class="party_tit">찬성</strong>
+										<div class="img_area">
+											<img src="../resources/images/content/img_party.png" alt="">
+										</div>
+										<div class="btn_group">
+											<button type="button" class="v_btn btn_outline_primary btn_xs">이미지 업로드</button>
+										</div>
+									</div>
+									<div class="party_item">
+										<strong class="party_tit">반대</strong>
+										<div class="img_area">
+											<img src="../resources/images/content/img_party.png" alt="">
+										</div>
+										<div class="btn_group">
+											<button type="button" class="v_btn btn_outline_primary btn_xs">이미지 업로드</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="btn_group_fixed">
+								<button type="button" class="v_btn btn_outline_primary btn_md">저장</button>
+								<a href="javascript:void(0)" class="v_btn btn_primary btn_md">목록</a>
+							</div>
+							<!-- // 본문 영역 -->
+						</div>
+					</div>
+				</div>
+
+				<div id="v_shortcut">
+					<div class="v_inner">
+						<h2 class="shortcut_tit"><span>Быстрый доступ</span></h2>
+						<ul class="shortcut_list">
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut1"></i><span>Голосование</span></a></li>
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut2"></i><span>Выступление/Вопросы</span></a></li>
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut3"></i><span>Регистрация</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="v_board">
+			<div class="v_inner">
+				<h2 class="board_tit"><span>Табло</span><i class="v_ico ico_arr_right_white"></i></h2>
+				<ul class="board_list">
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board1"></i><span>Голосование</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board2"></i><span>Выступление</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board3"></i><span>Вопросы</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board4"></i><span>Регистрация</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board5"></i><span>Таймер</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board6"></i><span>Заставка</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

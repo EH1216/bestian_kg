@@ -1,0 +1,145 @@
+#v_sidebar {
+	flex: 0 0 auto;
+	position: relative;
+	width: 28rem;
+
+	.sidebar_inner {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		background-color: $default;
+	}
+
+	.lnb_area {
+		flex: 1;
+
+		a {
+			color: #DCE0E5;
+			font-weight: 600;
+			transition: color .2s;
+		}
+
+		.depth1_tit {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 9rem;
+			padding: 0 2rem;
+			font-weight: 600;
+			color: #DCE0E5;
+			line-height: 2.4rem;
+		}
+
+		.depth2 {
+			border-top: 1px solid #525960;
+
+			>li {
+				border-bottom: 1px solid $gray;
+
+				>a {
+					display: flex;
+					align-items: center;
+					position: relative;
+					padding: 1.6rem 4rem 1.6rem 2rem;
+					font-size: 1.6rem;
+					line-height: 1.9rem;
+
+					&:hover {
+						color: #3FB5FF;
+					}
+				}
+
+				&.collapse {
+					>a {
+						display: flex;
+						position: relative;
+
+						&:after {
+							content: '';
+							position: absolute;
+							top: calc(50% - .8rem);
+							right: 2rem;
+							width: 1.6rem;
+							height: 1.6rem;
+							background: url(#{$url-img-common}/ico_plus.png) no-repeat 50% 50%;
+						}
+					}
+
+					&:not(.show) {
+						display: block;
+					}
+				}
+	
+				&.on {
+					>a {
+						color: #3FB5FF;
+						background-color: #2C2F32;
+
+						&:before {
+							content: '';
+							position: absolute;
+							top: 0;
+							bottom: 0;
+							left: 0;
+							width: .4rem;
+							height: 100%;
+							background-color: #3FB5FF;
+						}
+
+						&:after {
+							background-image: url(#{$url-img-common}/ico_minus.png);
+						}
+					}
+	
+					.depth3 {
+						display: block;
+						background-color: #2C2F32;
+					}
+				}
+			}
+		}
+
+		.depth3 {
+			padding: 1rem 4rem 2.5rem 2rem;
+			border-top: 1px solid $gray;
+
+			li {
+				margin-top: 1rem;
+
+				a {
+					display: block;
+					position: relative;
+					padding-left: 1.3rem;
+					color: #DCE0E5;
+					font-size: 1.5rem;
+					line-height: 1.8rem;
+					
+					&:before {
+						content: '';
+						position: absolute;
+						top: .8rem;
+						left: 0;
+						width: .3rem;
+						height: .3rem;
+						background-color: #DCE0E5;
+					}
+				}
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				&.on,
+				&:hover {
+					a {
+						color: #3FB5FF;
+						
+						&:before {
+							background-color: #3FB5FF;
+						}
+					}
+				}
+			}
+		}
+	}
+}

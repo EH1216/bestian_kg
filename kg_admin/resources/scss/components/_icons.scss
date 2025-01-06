@@ -1,0 +1,30 @@
+//
+// Icons
+// 
+
+.v_ico {
+	@include ir;
+}
+
+/* 컨텐츠 아이콘 */
+@include ico('arr_right_white', 1.7rem, 1.6rem);
+@include ico('board1', 2.5rem, 2.4rem);
+@include ico('board2', 2.5rem, 2.4rem);
+@include ico('board3', 2.5rem, 2.4rem);
+@include ico('board4', 2.5rem, 2.4rem);
+@include ico('board5', 2.5rem, 2.4rem);
+@include ico('board6', 2.5rem, 2.4rem);
+@include ico('home', 2rem, 2.1rem);
+@include ico('shortcut1', 2.4rem, 2.4rem);
+@include ico('shortcut2', 2.4rem, 2.4rem);
+@include ico('shortcut3', 2.4rem, 2.4rem);
+@include ico('logout', 2.4rem, 2.4rem);
+@include ico('trashcan', 2.5rem, 2.4rem);
+@include ico('trashcan', 2.5rem, 2.4rem);
+@include ico('search_white', 2.4rem, 2.4rem);
+@include ico('error', 2.4rem, 2.5rem);
+@include ico('close_white', 3.2rem, 3.2rem);
+@include ico('paging_first', 3.2rem, 3.2rem);
+@include ico('paging_prev', 3.2rem, 3.2rem);
+@include ico('paging_next', 3.2rem, 3.2rem);
+@include ico('paging_last', 3.2rem, 3.2rem);

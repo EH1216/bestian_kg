@@ -1,0 +1,118 @@
+#v_content {
+	display: flex;
+	flex-direction: column;
+	padding: 4rem;
+	flex: 1;
+	height: calc(100vh - 12rem);
+	max-width: calc(100% - 41.4rem);
+	max-height: calc(100vh - 12rem);
+	padding: 0 2rem 3rem 3rem;
+
+	@at-root .content_util {
+		display: flex;
+		align-items: center;
+		flex: 0 0 auto;
+		gap: 1rem;
+		padding: 0 2rem;
+		height: 9rem;
+
+		>.v_inner {
+			width: 100%;
+
+			&:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+		}
+
+		.title_wrap {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			float: left;
+			height: 3.3rem;
+			margin-right: auto;
+		}
+
+		.content_tit {
+			color: $black;
+			font-weight: 600;
+			font-size: 2.8rem;
+			line-height: 3.3rem;
+		}
+	}
+
+	@at-root .v_breadcrumb {
+		display: flex;
+		align-items: flex-end;
+		float: right;
+		height: 3.3rem;
+		margin-left: auto;
+
+		.path {
+			display: flex;
+			align-items: center;
+
+			li {
+				display: flex;
+				align-items: center;
+				color: #66707A;
+
+				+li {
+					&:before {
+						content: '';
+						display: inline-block;
+						width: 2rem;
+						height: 2.1rem;
+						vertical-align: middle;
+						background: url(#{$url-img-common}/ico_chevron_right.png) no-repeat 50% 50%;
+					}
+				}
+
+				&:last-child {
+					color: $black;
+				}
+			}
+		}
+	}
+
+	>.content_body {
+		flex: 1;
+		padding: 4rem 1rem 4rem 4rem;
+		border-radius: 2rem;
+		box-shadow: $shadow;
+		overflow: hidden;
+		background-color: $white;
+	}
+
+	.content_inner {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		padding-right: 3rem;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
+	@at-root .content_section {
+		flex: 1;
+	}
+
+	.overlap_wrap {
+		flex: 0 0 auto;
+	}
+
+	.btn_group_fixed {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		flex: 0 0 auto;
+		margin-top: 3rem;
+	}
+
+	.v_pagination {
+		flex: 0 0 auto;
+	}
+}

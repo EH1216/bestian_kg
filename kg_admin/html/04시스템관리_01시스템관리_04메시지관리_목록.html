@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>키르기스스탄 관리자용 프로그램</title>
+	<link rel="stylesheet" href="../resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script src="../resources/js/ui-common.js"></script>
+</head>
+
+<body>
+	<div class="v_wrapper">
+		<header id="v_header">
+			<div class="v_inner">
+				<h1 id="v_logo">20-й Конгресс</h1>
+				<nav id="v_gnb">
+					<ul class="gnb_list">
+						<li class="on"><a href="javascript:void(0)">Упр-е основной инф-ей</a></li>
+						<li><a href="javascript:void(0)">Упр-е заседаниями</a></li>
+						<li><a href="javascript:void(0)">Упр-е депутатами</a></li>
+						<li><a href="javascript:void(0)">Упр-е системой</a></li>
+					</ul>
+				</nav>
+				<div class="util_group">
+					<div class="util_item util_lang">
+						<label class="form_label">언어</label>
+						<div class="dropdown_menu">
+							<button type="button" class="dropdown_btn">ру́сский язы́к</button>
+							<div class="dropdown_cont">
+								<ul class="dropdown_list">
+									<li><button type="button" class="dropdown_item">Кыргыз</button></li>
+									<li><button type="button" class="dropdown_item">ру́сский язы́к</button></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="util_item util_ctrl">
+						<button type="button" class="v_btn btn_logout"><i class="v_ico ico_logout"></i></button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="v_container">
+			<div class="v_inner">
+				<div id="v_sidebar">
+					<div class="sidebar_inner">
+						<div class="lnb_area">
+							<h2 class="depth1_tit">시스템관리</h2>
+							<ul class="depth2">
+								<li class="collapse on"><a href="javascript:void(0)">시스템관리</a>
+									<ul class="depth3">
+										<li><a href="javascript:void(0)">공통코드관리</a></li>
+										<li><a href="javascript:void(0)">운영자관리</a></li>
+										<li><a href="javascript:void(0)">공지사항 관리</a></li>
+										<li class="on"><a href="javascript:void(0)">메시지관리</a></li>
+									</ul>
+								</li>
+								<li class="collapse"><a href="javascript:void(0)">장비정보관리</a>
+									<ul class="depth3">
+										<li><a href="javascript:void(0)">좌석위치관리</a></li>
+									</ul>
+								</li>
+								<li class="collapse"><a href="javascript:void(0)">회의배경관리</a>
+									<ul class="depth3">
+										<li><a href="javascript:void(0)">회의배경관리</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div id="v_content">
+					<div class="content_util">
+						<div class="v_inner">
+							<div class="title_wrap">
+								<h3 class="content_tit">메시지관리</h3>
+							</div>
+							<nav class="v_breadcrumb">
+								<ul class="path">
+									<li><i class="v_ico ico_home"></i></li>
+									<li>시스템관리</li>
+									<li>시스템관리</li>
+									<li>메시지관리</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="content_body">
+						<div class="content_inner">
+							<!-- 본문 영역 -->
+							<div class="content_section">
+								<div class="board_search">
+									<div class="search_inner">
+										<div class="form_row">
+											<div class="input_item_fit">
+												<label class="form_label">보낸 사람</label>
+												<input type="text" class="form_control" style="width: 229px;">
+											</div>
+											<div class="input_item_fit">
+												<label class="form_label">보낸 일자</label>
+												<input type="date" class="form_control form_datepicker" style="width: 229px;">
+											</div>
+										</div>
+									</div>
+									<div class="search_btn">
+										<button type="button" class="v_btn btn_primary btn_md"><i class="v_ico ico_search_white"></i><span>조회</span></button>
+									</div>
+								</div>
+								<div class="v_table table_list fixed_header fixed_header_type16">
+									<table>
+										<colgroup>
+											<col style="width: 5.3%;">
+											<col style="width: 22.8%;">
+											<col>
+											<col style="width: 14%;">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">No</th>
+												<th scope="col">보낸 사람</th>
+												<th scope="col">받은 사람</th>
+												<th scope="col">일시</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>АЙДАРОВА А. А.</td>
+												<td class="text_left"><span class="text_ellipsis">АБДАЛИЕВ М. А. , АБДИБАЕВА А.Н.</span></td>
+												<td>2024-07-24 13:00:47</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>АЙДАРБЕКОВ Ч. А.</td>
+												<td class="text_left"><span class="text_ellipsis">АБДАЛИЕВ М. А. , АБДИБАЕВА А.Н.АБДАЛИЕВ М. А. , АБДИБАЕВА А.Н.АБДАЛИЕВ М. А. , АБДИБАЕВА А.Н.АБДАЛИЕВ М. А. , АБДИБАЕВА А.Н.</span></td>
+												<td>2024-07-24 14:10:27</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>АБАКИРОВ Э. К.</td>
+												<td class="text_left"><span class="text_ellipsis">АБДАЛИЕВ М. А. , АБДИБАЕВА А.Н.АБДАЛИЕВ М. А. , АБДИБАЕВА А.Н.АБДАЛИЕВ М. А. , АБДИБАЕВА А.Н.АБДАЛИЕВ М. А. , АБДИБАЕВА А.Н.</span></td>
+												<td>2024-07-25 11:01:10</td>
+											</tr>
+										</tbody>
+									</table>  
+								</div>
+							</div>
+							<!-- // 본문 영역 -->
+						</div>
+					</div>
+				</div>
+
+				<div id="v_shortcut">
+					<div class="v_inner">
+						<h2 class="shortcut_tit"><span>Быстрый доступ</span></h2>
+						<ul class="shortcut_list">
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut1"></i><span>Голосование</span></a></li>
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut2"></i><span>Выступление/Вопросы</span></a></li>
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut3"></i><span>Регистрация</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="v_board">
+			<div class="v_inner">
+				<h2 class="board_tit"><span>Табло</span><i class="v_ico ico_arr_right_white"></i></h2>
+				<ul class="board_list">
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board1"></i><span>Голосование</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board2"></i><span>Выступление</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board3"></i><span>Вопросы</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board4"></i><span>Регистрация</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board5"></i><span>Таймер</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board6"></i><span>Заставка</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
