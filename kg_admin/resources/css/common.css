@@ -2791,7 +2791,7 @@ table {
   font-size: 1.5rem;
   background-color: #fff;
 }
-.table_list tbody tr:hover {
+.table_list tbody tr {
   cursor: pointer;
 }
 .table_list tbody tr:hover td, .table_list tbody tr.selected td {

@@ -101,9 +101,7 @@ table {
 
 	tbody {
 		tr {
-			&:hover {
-				cursor: pointer;
-			}
+			cursor: pointer;
 
 			&:hover,
 			&.selected {
@@ -264,7 +262,7 @@ table {
 		&.tbody_add {
 			tr {
 				cursor: default;
-				
+
 				&:hover {
 					td {
 						background-color: transparent;
