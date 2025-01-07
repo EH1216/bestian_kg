@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>키르기스스탄 관리자용 프로그램</title>
+	<link rel="stylesheet" href="../resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script src="../resources/js/ui-common.js"></script>
+</head>
+
+<body>
+	<div class="v_wrapper">
+		<header id="v_header">
+			<div class="v_inner">
+				<h1 id="v_logo">20-й Конгресс</h1>
+				<nav id="v_gnb">
+					<ul class="gnb_list">
+						<li><a href="javascript:void(0)">Упр-е основной инф-ей</a></li>
+						<li><a href="javascript:void(0)">Упр-е заседаниями</a></li>
+						<li><a href="javascript:void(0)">Упр-е депутатами</a></li>
+						<li><a href="javascript:void(0)">Упр-е системой</a></li>
+					</ul>
+				</nav>
+				<div class="util_group">
+					<div class="util_item util_lang">
+						<label class="form_label">언어</label>
+						<div class="dropdown_menu">
+							<button type="button" class="dropdown_btn">ру́сский язы́к</button>
+							<div class="dropdown_cont">
+								<ul class="dropdown_list">
+									<li><button type="button" class="dropdown_item">Кыргыз</button></li>
+									<li><button type="button" class="dropdown_item">ру́сский язы́к</button></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="util_item util_ctrl">
+						<button type="button" class="v_btn btn_logout"><i class="v_ico ico_logout"></i></button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="v_container">
+			<div class="v_inner">
+				<div id="v_content">
+					<div class="content_util">
+						<div class="v_inner">
+							<div class="title_wrap">
+								<h3 class="content_tit">등록</h3>
+							</div>
+							<nav class="v_breadcrumb">
+								<ul class="path">
+									<li><i class="v_ico ico_home"></i></li>
+									<li>등록</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="content_body">
+						<div class="content_inner">
+							<!-- 본문 영역 -->
+							<div class="content_section">
+								<div class="regist_wrap">
+									<div class="btn_group">
+										<div class="left">
+											<button type="button" class="v_btn btn_secondary btn_md"><i class="v_ico ico_play_white"></i><span>등록 시작</span></button>
+										</div>
+										<div class="right">
+											<button type="button" class="v_btn btn_primary btn_md">추가 등록</button>
+											<button type="button" class="v_btn btn_outline_neutral btn_md">등록 종료</button>
+										</div>
+									</div>
+									<div class="v_box bg_gray mt_4">
+										<ul class="list_row">
+											<li><strong>등록 시작 일시</strong><span>17 марта 2024 г. 18:06:19</span></li>
+											<li><strong>상태</strong><span>등록 중</span></li>
+										</ul>
+									</div>
+									<div class="v_table table_list fixed_header fixed_header_type21 mt_4">
+										<table>
+											<colgroup>
+												<col style="width: 31%;">
+												<col>
+												<col span="2" style="width: 11.7%;">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">의원명</th>
+													<th scope="col">정당명</th>
+													<th scope="col">등록여부</th>
+													<th scope="col">등록시간</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>АЙДАРОВА АЙГҮЛ АБДИСАЛАМОВНА</td>
+													<td>Кыргызстан</td>
+													<td>да</td>
+													<td>17.03.2024 15:55:34</td>
+												</tr>
+												<tr>
+													<td>АЖИБАЕВ ЧЫҢГЫЗ ИЛЬЯСКОЖОЕВИЧ</td>
+													<td>Республика-Ата-Журт</td>
+													<td>да</td>
+													<td>17.03.2024 15:55:38</td>
+												</tr>
+												<tr>
+													<td>АБДИБАЕВА АЙСАРАКАН НЫШАНОВНА</td>
+													<td>Өнүгүү-Прогресс</td>
+													<td>нет</td>
+													<td></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<!-- // 본문 영역 -->
+						</div>
+					</div>		
+				</div>
+
+				<div id="v_shortcut">
+					<div class="v_inner">
+						<h2 class="shortcut_tit"><span>Быстрый доступ</span></h2>
+						<ul class="shortcut_list">
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut1"></i><span>Голосование</span></a></li>
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut2"></i><span>Выступление/Вопросы</span></a></li>
+							<li class="on"><a href="javascript:void(0)"><i class="v_ico ico_shortcut3"></i><span>Регистрация</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="v_board">
+			<div class="v_inner">
+				<h2 class="board_tit"><span>Табло</span><i class="v_ico ico_arr_right_white"></i></h2>
+				<ul class="board_list">
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board1"></i><span>Голосование</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board2"></i><span>Выступление</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board3"></i><span>Вопросы</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board4"></i><span>Регистрация</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board5"></i><span>Таймер</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board6"></i><span>Заставка</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- 레이어팝업 (투표 중) -->
+	<div class="layer_popup layer_sm popup_vote_ing hide" id="layer_vote_ing">
+		<div class="popup_inner">
+			<div class="popup_header">
+				<h2 class="popup_tit">투표 중</h2>
+			</div>
+			<div class="popup_body">
+				<div class="scroll_inner">
+					<div class="popup_cont">
+						<div class="form_col type2">
+							<div class="input_item">
+								<label class="form_label">투표주제</label>
+								<div class="input_text">
+									<span>1. Кыргыз Республикасынын айрым мыйзам актыларына (“Кыргыз Республикасында мамлекеттик менчикти менчиктештирүү жөнүндө”, “Акционердик коомдор жөнүндө”, “Кыргыз Республикасынын стратегиялык объектилери жөнүндө” мыйзамдарга) өзгөртүүлөрдү киргизүү тууралуу Мыйзамдын долбоору</span>
+								</div>
+							</div>
+							<div class="input_item">
+								<label class="form_label">투표종류</label>
+								<div class="input_text">
+									<span>기명투표</span>
+								</div>
+							</div>
+							<div class="input_item">
+								<label class="form_label">투표주제</label>
+								<div class="box_result">
+									<div class="result_cont">
+										<div class="left">
+											<div class="result_item">
+												<strong>За</strong>
+												<span>12</span>
+											</div>
+											<div class="result_item">
+												<strong>Против</strong>
+												<span>3</span>
+											</div>
+										</div>
+										<div class="right">
+											<div class="result_item">
+												<strong>Мест</strong>
+												<span>20</span>
+											</div>
+											<div class="result_item">
+												<strong>Не голосовало</strong>
+												<span>5</span>
+											</div>
+										</div>
+									</div>
+									<div class="result_total">
+										<div class="result_item">
+											<strong>Всего голосов</strong>
+											<span>30</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="remain_time_wrap">
+							<dl class="time_info">
+								<dt>남은시간</dt>
+								<dd>14</dd>
+							</dl>
+							<div class="progress_bar">
+								<span style="width: 15%"></span>
+							</div>
+						</div>
+					</div>
+					<div class="popup_footer">
+						<div class="btn_group">
+							<button type="button" class="v_btn btn_outline_neutral btn_md" onclick="closeModal('#layer_vote_ing')">취소</button>
+							<button type="button" class="v_btn btn_primary btn_md">확인</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btn btn_close_popup"><i class="v_ico ico_close_white"></i></button>
+		</div>
+	</div>
+</body>
+
+</html>

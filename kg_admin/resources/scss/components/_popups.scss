@@ -54,7 +54,7 @@
 	&.layer_sm {
 		.popup_inner {
 			width: 80rem;
-			min-height: 32rem;
+			min-height: 36rem;
 		}
 	}
 }
@@ -97,27 +97,6 @@
 	flex: 1;
 	height: 100%;
 
-	.board_search {
-		padding: 0;
-		border: 0;
-		background-color: transparent;
-
-		.search_inner {
-			border-right: 0;
-			border-radius: 0;
-		}
-
-		.form_row {
-			>.input_item {
-				padding-right: 2rem;
-			}
-		}
-
-		.search_btn {
-			padding-left: 0;
-		}
-	}
-
 	.v_table {
 		.form_control {
 			&:not(textarea) {
@@ -141,12 +120,6 @@
 					font-size: 1.5rem;
 				}
 			}
-		}
-	}
-
-	.form_control {
-		&:not(textarea) {
-			height: 4rem;
 		}
 	}
 }

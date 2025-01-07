@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>키르기스스탄 관리자용 프로그램</title>
+	<link rel="stylesheet" href="../resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script src="../resources/js/ui-common.js"></script>
+</head>
+
+<body>
+	<div class="v_wrapper">
+		<header id="v_header">
+			<div class="v_inner">
+				<h1 id="v_logo">20-й Конгресс</h1>
+				<nav id="v_gnb">
+					<ul class="gnb_list">
+						<li><a href="javascript:void(0)">Упр-е основной инф-ей</a></li>
+						<li><a href="javascript:void(0)">Упр-е заседаниями</a></li>
+						<li><a href="javascript:void(0)">Упр-е депутатами</a></li>
+						<li class="on"><a href="javascript:void(0)">Упр-е системой</a></li>
+					</ul>
+				</nav>
+				<div class="util_group">
+					<div class="util_item util_lang">
+						<label class="form_label">언어</label>
+						<div class="dropdown_menu">
+							<button type="button" class="dropdown_btn">ру́сский язы́к</button>
+							<div class="dropdown_cont">
+								<ul class="dropdown_list">
+									<li><button type="button" class="dropdown_item">Кыргыз</button></li>
+									<li><button type="button" class="dropdown_item">ру́сский язы́к</button></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="util_item util_ctrl">
+						<button type="button" class="v_btn btn_logout"><i class="v_ico ico_logout"></i></button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="v_container">
+			<div class="v_inner">
+				<div id="v_sidebar">
+					<div class="sidebar_inner">
+						<div class="lnb_area">
+							<h2 class="depth1_tit">시스템관리</h2>
+							<ul class="depth2">
+								<li><a href="javascript:void(0)">시스템관리</a>
+									<ul class="depth3">
+										<li><a href="javascript:void(0)">공통코드관리</a></li>
+										<li><a href="javascript:void(0)">운영자관리</a></li>
+										<li><a href="javascript:void(0)">공지사항 관리</a></li>
+										<li><a href="javascript:void(0)">메시지관리</a></li>
+									</ul>
+								</li>
+								<li class="collapse on"><a href="javascript:void(0)">장비정보관리</a>
+									<ul class="depth3">
+										<li class="on"><a href="javascript:void(0)">좌석위치관리</a></li>
+									</ul>
+								</li>
+								<li class="collapse"><a href="javascript:void(0)">회의배경관리</a>
+									<ul class="depth3">
+										<li><a href="javascript:void(0)">회의배경관리</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div id="v_content">
+					<div class="content_util">
+						<div class="v_inner">
+							<div class="title_wrap">
+								<h3 class="content_tit">좌석위치관리</h3>
+							</div>
+							<nav class="v_breadcrumb">
+								<ul class="path">
+									<li><i class="v_ico ico_home"></i></li>
+									<li>시스템관리</li>
+									<li>장비정보관리</li>
+									<li>좌석위치관리</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="content_body">
+						<div class="content_inner">
+							<!-- 본문 영역 -->
+							<div class="content_section">
+								<div class="flex_container">
+									<div class="flex_item">
+										<h4 class="v_tit2">좌석배치</h4>
+									</div>
+									<div class="flex_item_fit">
+										<div class="btn_group">
+											<button type="button" class="v_btn btn_primary btn_md">저장</button>
+										</div>
+									</div>
+								</div>
+								<div class="content_row seat_wrap">
+									<div class="left v_box">
+										<div class="form_row mb_4">
+											<div class="input_item">
+												<label class="form_label">좌석아이디</label>
+												<div class="input_group">
+													<input type="text" class="form_control" style="width: 181px;">
+													<span class="input_addon">
+														<button type="button" class="v_btn btn_primary btn_md">조회</button>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="seat_inner">
+											<div class="seat_area" style="width: 1346px; height: 394px;">
+												<div class="seat_item" style="top: 0; left: 584px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 0; left: 645px;">
+													<img src="../resources/images/content/img_mark2.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 0; left: 706px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+		
+												<div class="seat_item" style="top: 72px; left: 0;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 61px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 122px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 183px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 244px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 305px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 401px;"></div>
+												<div class="seat_item selected" style="top: 72px; left: 462px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 523px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 584px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 645px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 706px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 767px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 828px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 889px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 985px;">
+													<img src="../resources/images/content/img_mark2.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 1046px;">
+													<img src="../resources/images/content/img_mark2.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 1107px;">
+													<img src="../resources/images/content/img_mark2.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 1168px;">
+													<img src="../resources/images/content/img_mark2.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 1229px;">
+													<img src="../resources/images/content/img_mark2.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 72px; left: 1290px;">
+													<img src="../resources/images/content/img_mark2.jpg" alt="">
+												</div>
+		
+												<div class="seat_item" style="top: 124px; left: 0;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 61px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 122px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 183px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 244px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 305px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 401px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 462px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 523px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 584px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 645px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 706px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 767px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 828px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 889px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 985px;">
+													<img src="../resources/images/content/img_mark2.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 1046px;">
+													<img src="../resources/images/content/img_mark2.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 1107px;">
+													<img src="../resources/images/content/img_mark2.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 1168px;">
+													<img src="../resources/images/content/img_mark2.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 1229px;">
+													<img src="../resources/images/content/img_mark2.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 124px; left: 1290px;">
+													<img src="../resources/images/content/img_mark2.jpg" alt="">
+												</div>
+		
+												<div class="seat_item" style="top: 196px; left: 122px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 196px; left: 183px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 196px; left: 244px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 196px; left: 305px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 196px; left: 401px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 196px; left: 462px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 196px; left: 523px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 196px; left: 584px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 196px; left: 584px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 196px; left: 645px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 196px; left: 706px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 196px; left: 767px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 196px; left: 828px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 196px; left: 889px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 196px; left: 985px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 196px; left: 1046px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 196px; left: 1107px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 196px; left: 1168px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+		
+												<div class="seat_item" style="top: 248px; left: 122px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 248px; left: 183px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 248px; left: 244px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 248px; left: 305px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 248px; left: 401px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 248px; left: 462px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 248px; left: 523px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 248px; left: 584px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 248px; left: 584px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 248px; left: 645px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 248px; left: 706px;"></div>
+												<div class="seat_item" style="top: 248px; left: 767px;"></div>
+												<div class="seat_item" style="top: 248px; left: 828px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 248px; left: 889px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 248px; left: 985px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 248px; left: 1046px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 248px; left: 1107px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 248px; left: 1168px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+		
+												<div class="seat_item" style="top: 300px; left: 122px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 300px; left: 183px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 300px; left: 244px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 300px; left: 305px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 300px; left: 401px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 300px; left: 462px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 300px; left: 523px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 300px; left: 584px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 300px; left: 584px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 300px; left: 645px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 300px; left: 706px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 300px; left: 767px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item on" style="top: 300px; left: 828px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 300px; left: 889px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 300px; left: 985px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 300px; left: 1046px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 300px; left: 1107px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 300px; left: 1168px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+		
+												<div class="seat_item" style="top: 352px; left: 122px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 352px; left: 183px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 352px; left: 244px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 352px; left: 305px;">
+													<img src="../resources/images/content/img_mark3.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 352px; left: 401px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 352px; left: 462px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 352px; left: 523px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 352px; left: 584px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 352px; left: 584px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 352px; left: 645px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 352px; left: 706px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 352px; left: 767px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 352px; left: 828px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 352px; left: 889px;">
+													<img src="../resources/images/content/img_mark4.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 352px; left: 985px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 352px; left: 1046px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 352px; left: 1107px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+												<div class="seat_item" style="top: 352px; left: 1168px;">
+													<img src="../resources/images/content/img_mark1.jpg" alt="">
+												</div>
+											</div>
+										</div>
+										<div class="btn_group mt_4">
+											<div class="center">
+												<button type="button" class="v_btn btn_outline_neutral btn_md">취소</button>
+											</div>
+										</div>
+									</div>
+									<div class="right v_box">
+										<div class="form_row mb_6">
+											<div class="input_item">
+												<label class="form_label">의원명</label>
+												<div class="input_group">
+													<input type="text" class="form_control">
+													<span class="input_addon">
+														<button type="button" class="v_btn btn_primary btn_md">조회</button>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="v_table table_list table_sm fixed_header fixed_header_type24">
+											<table>
+												<colgroup>
+													<col>
+													<col>
+													<col style="width: 24.9%;">
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col">의원명</th>
+														<th scope="col">정당</th>
+														<th scope="col">지정여부</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>АЙДАРОВА А. А.</td>
+														<td><span class="text_ellipsis">Бир-Бол</span></td>
+														<td>Y</td>
+													</tr>
+													<tr>
+														<td>АЙДАРБЕКОВ Ч. А.</td>
+														<td><span class="text_ellipsis">Кыргызстан</span></td>
+														<td>Y</td>
+													</tr>
+													<tr>
+														<td>АБАКИРОВ Э. К.</td>
+														<td><span class="text_ellipsis">Өнүгүү-Прогресс</span></td>
+														<td>Y</td>
+													</tr>
+													<tr>
+														<td>АБДАЛИЕВ М. А.</td>
+														<td><span class="text_ellipsis">Республика-Ат</span></td>
+														<td>Y</td>
+													</tr>
+													<tr class="selected">
+														<td>АБДИБАЕВА А. Н.</td>
+														<td><span class="text_ellipsis">СДПК</span></td>
+														<td>Y</td>
+													</tr>
+													<tr>
+														<td>АЖИБАЕВ Ч. И.</td>
+														<td><span class="text_ellipsis">Өнүгүү-Прогресс</span></td>
+														<td>Y</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // 본문 영역 -->
+						</div>
+					</div>
+				</div>
+
+				<div id="v_shortcut">
+					<div class="v_inner">
+						<h2 class="shortcut_tit"><span>Быстрый доступ</span></h2>
+						<ul class="shortcut_list">
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut1"></i><span>Голосование</span></a></li>
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut2"></i><span>Выступление/Вопросы</span></a></li>
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut3"></i><span>Регистрация</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="v_board">
+			<div class="v_inner">
+				<h2 class="board_tit"><span>Табло</span><i class="v_ico ico_arr_right_white"></i></h2>
+				<ul class="board_list">
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board1"></i><span>Голосование</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board2"></i><span>Выступление</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board3"></i><span>Вопросы</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board4"></i><span>Регистрация</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board5"></i><span>Таймер</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board6"></i><span>Заставка</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

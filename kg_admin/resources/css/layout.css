@@ -368,7 +368,6 @@
       -ms-flex: 1;
           flex: 1;
   height: calc(100vh - 12rem);
-  max-width: calc(100% - 41.4rem);
   max-height: calc(100vh - 12rem);
   padding: 0 2rem 3rem 3rem;
 }
@@ -510,6 +509,10 @@
           flex: 0 0 auto;
 }
 
+#v_sidebar ~ #v_content {
+  max-width: calc(100% - 41.4rem);
+}
+
 #v_shortcut {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
@@ -564,6 +567,10 @@
   font-weight: 500;
   line-height: 1.4rem;
   text-align: center;
+}
+#v_shortcut .shortcut_list li.on a {
+  color: #26A5F3;
+  text-shadow: 0 0 0.02rem #26A5F3;
 }
 #v_shortcut .shortcut_list li.on .ico_shortcut1 {
   background-image: url(../images/common/ico_shortcut1_on.png);

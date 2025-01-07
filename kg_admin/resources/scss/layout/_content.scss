@@ -4,7 +4,6 @@
 	padding: 4rem;
 	flex: 1;
 	height: calc(100vh - 12rem);
-	max-width: calc(100% - 41.4rem);
 	max-height: calc(100vh - 12rem);
 	padding: 0 2rem 3rem 3rem;
 
@@ -115,4 +114,8 @@
 	.v_pagination {
 		flex: 0 0 auto;
 	}
+}
+
+#v_sidebar~#v_content {
+	max-width: calc(100% - 41.4rem);
 }

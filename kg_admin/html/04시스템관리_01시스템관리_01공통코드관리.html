@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>키르기스스탄 관리자용 프로그램</title>
+	<link rel="stylesheet" href="../resources/css/style.css">
+
+	<!-- JavaScript -->
+	<script src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script src="../resources/js/ui-common.js"></script>
+</head>
+
+<body>
+	<div class="v_wrapper">
+		<header id="v_header">
+			<div class="v_inner">
+				<h1 id="v_logo">20-й Конгресс</h1>
+				<nav id="v_gnb">
+					<ul class="gnb_list">
+						<li><a href="javascript:void(0)">Упр-е основной инф-ей</a></li>
+						<li><a href="javascript:void(0)">Упр-е заседаниями</a></li>
+						<li><a href="javascript:void(0)">Упр-е депутатами</a></li>
+						<li class="on"><a href="javascript:void(0)">Упр-е системой</a></li>
+					</ul>
+				</nav>
+				<div class="util_group">
+					<div class="util_item util_lang">
+						<label class="form_label">언어</label>
+						<div class="dropdown_menu">
+							<button type="button" class="dropdown_btn">ру́сский язы́к</button>
+							<div class="dropdown_cont">
+								<ul class="dropdown_list">
+									<li><button type="button" class="dropdown_item">Кыргыз</button></li>
+									<li><button type="button" class="dropdown_item">ру́сский язы́к</button></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="util_item util_ctrl">
+						<button type="button" class="v_btn btn_logout"><i class="v_ico ico_logout"></i></button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="v_container">
+			<div class="v_inner">
+				<div id="v_sidebar">
+					<div class="sidebar_inner">
+						<div class="lnb_area">
+							<h2 class="depth1_tit">시스템관리</h2>
+							<ul class="depth2">
+								<li class="collapse on"><a href="javascript:void(0)">시스템관리</a>
+									<ul class="depth3">
+										<li class="on"><a href="javascript:void(0)">공통코드관리</a></li>
+										<li><a href="javascript:void(0)">운영자관리</a></li>
+										<li><a href="javascript:void(0)">공지사항 관리</a></li>
+										<li><a href="javascript:void(0)">메시지관리</a></li>
+									</ul>
+								</li>
+								<li class="collapse"><a href="javascript:void(0)">장비정보관리</a>
+									<ul class="depth3">
+										<li><a href="javascript:void(0)">좌석위치관리</a></li>
+									</ul>
+								</li>
+								<li class="collapse"><a href="javascript:void(0)">회의배경관리</a>
+									<ul class="depth3">
+										<li><a href="javascript:void(0)">회의배경관리</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div id="v_content">
+					<div class="content_util">
+						<div class="v_inner">
+							<div class="title_wrap">
+								<h3 class="content_tit">공통코드관리</h3>
+							</div>
+							<nav class="v_breadcrumb">
+								<ul class="path">
+									<li><i class="v_ico ico_home"></i></li>
+									<li>시스템관리</li>
+									<li>시스템관리</li>
+									<li>공통코드관리</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="content_body">
+						<div class="content_inner">
+							<!-- 본문 영역 -->
+							<div class="content_section">
+								<div class="content_row code_wrap">
+									<div class="col_6">
+										<div class="v_box">
+											<h4 class="v_tit2">상위코드명</h4>
+											<div class="code_cont type1">
+												<div class="code_inner">
+													<ul class="check_list">
+														<li>
+															<span class="check_item check_item_custom">
+																<input type="radio" id="inputRadio1_1" name="inputRadio1" checked>
+																<label for="inputRadio1_1">회의구분</label>
+															</span>
+														</li>
+														<li>
+															<span class="check_item check_item_custom">
+																<input type="radio" id="inputRadio1_2" name="inputRadio1">
+																<label for="inputRadio1_2">회기구분</label>
+															</span>
+														</li>
+														<li>
+															<span class="check_item check_item_custom">
+																<input type="radio" id="inputRadio1_3" name="inputRadio1">
+																<label for="inputRadio1_3">안건구분</label>
+															</span>
+														</li>
+														<li>
+															<span class="check_item check_item_custom">
+																<input type="radio" id="inputRadio1_4" name="inputRadio1">
+																<label for="inputRadio1_4">사용여부</label>
+															</span>
+														</li>
+														<li>
+															<span class="check_item check_item_custom">
+																<input type="radio" id="inputRadio1_5" name="inputRadio1">
+																<label for="inputRadio1_5">장비구분</label>
+															</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="btn_group mt_6">
+												<div class="center">
+													<button type="button" class="v_btn btn_outline_primary btn_md">수정</button>
+													<button type="button" class="v_btn btn_primary btn_md">등록</button>
+												</div>
+											</div>
+										</div>
+										<div class="v_box">
+											<h4 class="v_tit2">상위코드 등록 / 수정</h4>
+											<div class="code_cont type2">
+												<div class="form_row type2">
+													<div class="input_item">
+														<label class="form_label">코드</label>
+														<input type="text" class="form_control" disabled>
+													</div>
+													<div class="input_item">
+														<label class="form_label">코드명</label>
+														<input type="text" class="form_control" disabled>
+													</div>
+												</div>
+												<div class="form_row type2">
+													<div class="input_item">
+														<label class="form_label">순서</label>
+														<input type="text" class="form_control" disabled>
+													</div>
+													<div class="input_item">
+														<label class="form_label">사용여부</label>
+														<div class="check_area">
+															<span class="check_item">
+																<input type="radio" name="inputRadio3" id="inputRadio3_1" checked disabled>
+																<label for="inputRadio3_1">사용</label>
+															</span>
+															<span class="check_item">
+																<input type="radio" name="inputRadio3" id="inputRadio3_2" disabled>
+																<label for="inputRadio3_2">미사용</label>
+															</span>
+														</div>
+													</div>
+												</div>
+												<div class="form_row type2">
+													<div class="input_item">
+														<label class="form_label">비고</label>
+														<input type="text" class="form_control" disabled>
+													</div>
+												</div>
+											</div>
+											<div class="btn_group mt_6">
+												<div class="center">
+													<button type="button" class="v_btn btn_outline_neutral btn_md">취소</button>
+													<button type="button" class="v_btn btn_outline_primary btn_md">저장</button>
+													<button type="button" class="v_btn btn_primary btn_md">재입력</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col_6">
+										<div class="v_box">
+											<h4 class="v_tit2">코드명</h4>
+											<div class="code_cont type1">
+												<div class="code_inner">
+													<ul class="check_list">
+														<li>
+															<span class="check_item check_item_custom">
+																<input type="radio" id="inputRadio2_1" name="inputRadio2" checked>
+																<label for="inputRadio2_1">본회의</label>
+															</span>
+														</li>
+														<li>
+															<span class="check_item check_item_custom">
+																<input type="radio" id="inputRadio2_2" name="inputRadio2">
+																<label for="inputRadio2_2">소관위</label>
+															</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="btn_group mt_6">
+												<div class="center">
+													<button type="button" class="v_btn btn_outline_primary btn_md">수정</button>
+													<button type="button" class="v_btn btn_primary btn_md">등록</button>
+												</div>
+											</div>
+										</div>
+										<div class="v_box">
+											<h4 class="v_tit2">코드 등록 / 수정</h4>
+											<div class="code_cont">
+												<div class="form_row mb_4">
+													<div class="input_item_fit">
+														<label class="form_label">상위코드</label>
+														<div class="form_text">회의구분</div>
+													</div>
+												</div>
+												<div class="form_row type2">
+													<div class="input_item">
+														<label class="form_label">코드</label>
+														<input type="text" class="form_control">
+													</div>
+													<div class="input_item">
+														<label class="form_label">코드명</label>
+														<input type="text" class="form_control">
+													</div>
+												</div>
+												<div class="form_row type2">
+													<div class="input_item">
+														<label class="form_label">순서</label>
+														<input type="text" class="form_control">
+													</div>
+													<div class="input_item">
+														<label class="form_label">사용여부</label>
+														<div class="check_area">
+															<span class="check_item">
+																<input type="radio" name="inputRadio4" id="inputRadio4_1" checked>
+																<label for="inputRadio4_1">사용</label>
+															</span>
+															<span class="check_item">
+																<input type="radio" name="inputRadio4" id="inputRadio4_2">
+																<label for="inputRadio4_2">미사용</label>
+															</span>
+														</div>
+													</div>
+												</div>
+												<div class="form_row type2">
+													<div class="input_item">
+														<label class="form_label">비고</label>
+														<input type="text" class="form_control">
+													</div>
+												</div>
+											</div>
+											<div class="btn_group mt_6">
+												<div class="center">
+													<button type="button" class="v_btn btn_outline_neutral btn_md">취소</button>
+													<button type="button" class="v_btn btn_outline_primary btn_md">저장</button>
+													<button type="button" class="v_btn btn_primary btn_md">재입력</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- // 본문 영역 -->
+						</div>
+					</div>
+				</div>
+
+				<div id="v_shortcut">
+					<div class="v_inner">
+						<h2 class="shortcut_tit"><span>Быстрый доступ</span></h2>
+						<ul class="shortcut_list">
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut1"></i><span>Голосование</span></a></li>
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut2"></i><span>Выступление/Вопросы</span></a></li>
+							<li><a href="javascript:void(0)"><i class="v_ico ico_shortcut3"></i><span>Регистрация</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="v_board">
+			<div class="v_inner">
+				<h2 class="board_tit"><span>Табло</span><i class="v_ico ico_arr_right_white"></i></h2>
+				<ul class="board_list">
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board1"></i><span>Голосование</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board2"></i><span>Выступление</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board3"></i><span>Вопросы</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board4"></i><span>Регистрация</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board5"></i><span>Таймер</span></a></li>
+					<li><a href="javascript:void(0)"><i class="v_ico ico_board6"></i><span>Заставка</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

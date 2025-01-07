@@ -43,6 +43,11 @@
 			}
 
 			&.on {
+				a {
+					color: #26A5F3;
+					text-shadow: 0 0 .02rem #26A5F3;
+				}
+
 				.ico_shortcut1 {
 					background-image: url(#{$url-img-common}/ico_shortcut1_on.png);
 				}

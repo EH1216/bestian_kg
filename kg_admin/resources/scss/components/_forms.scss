@@ -81,6 +81,7 @@
 input[type=text]:not(.form_datepicker),
 input[type=password] {
 	&.is_invalid {
+		padding-right: 3.5rem;
 		background: url(#{$url-img-common}/ico_invalid.png) no-repeat right 10px center;
 	}
 }
@@ -193,7 +194,7 @@ textarea.form_control {
 					border: .2rem solid #A8B3BD;
 					vertical-align: middle;
 					border-radius: .4rem;
-					margin: -.2rem .8rem 0 0;
+					margin: -.2rem 1rem 0 0;
 					cursor: pointer;
 
 					transition-duration: .2s;
@@ -226,7 +227,7 @@ textarea.form_control {
 				&:disabled {
 					+label {
 						&:before {
-							background-color: rgba(0, 148, 211, .4);
+							background-color: rgba(16, 149, 232, .4);
 						}
 					}
 				}
@@ -251,6 +252,7 @@ textarea.form_control {
 				&:disabled {
 					+label {
 						&:before {
+							border-color: rgba(16, 149, 232, .4);
 							background-image: url(#{$url-img-common}/ico_radio_checked_disabled.png);
 						}
 					}
@@ -267,16 +269,27 @@ textarea.form_control {
 			display: inline-flex;
 			align-items: center;
 			position: relative;
-			height: 3.6rem;
-			padding: 0 2rem;
-			border: 1px solid #E2E2E2;
-			border-radius: 0;
-			color: #121212;
+			height: 4.5rem;
+			padding: 0 4rem 0 2rem;
+			border: 1px solid #E7EBEE;
+			border-radius: .2rem;
+			color: $black;
+			font-size: 1.5rem;
 			background-color: $white;
 			cursor: pointer;
 
 			&:before {
 				display: none;
+			}
+			
+			&:after {
+				content: '';
+				position: absolute;
+				top: calc(50% - 1.3rem);
+				right: 1rem;
+				width: 2.4rem;
+				height: 2.5rem;
+				background: url(#{$url-img-common}/ico_chevron_right_lg.png) no-repeat 50% 50%;
 			}
 		}
 
@@ -285,6 +298,11 @@ textarea.form_control {
 				border-color: $primary;
 				color: $primary;
 				text-shadow: 0 0 .07rem $primary;
+				background-color: #F5FBFF;
+
+				&:after {
+					background-image: url(#{$url-img-common}/ico_chevron_right_lg_primary.png);
+				}
 			}
 		}
 	}
@@ -337,6 +355,7 @@ textarea.form_control {
 			margin-right: 1.9rem;
 			color: $black;
 			font-weight: 500;
+			font-size: 1.5rem;
 			line-height: 1.8rem;
 		}
 
@@ -375,6 +394,10 @@ textarea.form_control {
 		.form_control {
 			width: 200px;
 		}
+
+		&.full {
+			max-width: 100%;
+		}
 	}
 
 	+.form_row {
@@ -382,6 +405,7 @@ textarea.form_control {
 	}
 
 	&.type2 {
+		align-items: flex-start;
 		gap: 3rem;
 
 		>.input_item {
@@ -390,6 +414,7 @@ textarea.form_control {
 			align-items: flex-start;
 			flex: 1;
 			gap: 1rem;
+			max-width: none;
 
 			>.form_label {
 				flex: 1;
@@ -397,6 +422,10 @@ textarea.form_control {
 				max-width: 100%;
 				margin-right: 0;
 			}
+		}
+
+		.text_invalid {
+			margin-top: -.5rem;
 		}
 
 		+.form_row {
@@ -433,6 +462,32 @@ textarea.form_control {
 		}
 	}
 
+	.subject_area {
+		position: relative;
+		width: 100%;
+
+		.form_control {
+			color: transparent;
+		}
+
+		.text_box {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			padding: 0 1.5rem;
+			border-radius: .6rem;
+			color: $black;
+			font-size: 1.4rem;
+			line-height: 3.6rem;
+
+			&:focus {
+				outline: 1px solid $primary;
+				outline-offset: -1px;
+			}
+		}
+	}
+
 	&.type2 {
 		gap: 2rem;
 
@@ -449,6 +504,10 @@ textarea.form_control {
 			}
 
 			>.form_row {
+				>.input_item {
+					max-width: none;
+				}
+
 				.form_label {
 					width: 9rem;
 					max-width: 9rem;
@@ -456,6 +515,11 @@ textarea.form_control {
 				}
 
 				&.type2 {
+					>.input_item {
+						flex-direction: row;
+						gap: 0;
+					}
+
 					.form_label {
 						width: 13.2rem;
 						max-width: 13.2rem;
@@ -463,6 +527,10 @@ textarea.form_control {
 					}
 				}
 			}
+		}
+
+		.text_invalid {
+			margin-top: -.5rem;
 		}
 	}
 
@@ -484,11 +552,16 @@ textarea.form_control {
 				height: 5.2rem;
 			}
 		}
+
+		.text_invalid {
+			margin: -1.5rem 0 0 13.5rem;
+		}
 	}
 }
 
 .text_area {
 	width: 100%;
+	margin-bottom: .8rem;
 
 	textarea.form_control {
 		&[readonly] {
@@ -506,6 +579,23 @@ textarea.form_control {
 		letter-spacing: -0.03em;
 		text-align: right;
 		line-height: 1.6rem;
+	}
+}
+
+.form_box {
+	width: 100%;
+	padding: 1rem 1.5rem;
+	border: 1px solid $border-color;
+	border-radius: .6rem;
+	color: $black;
+
+	>span {
+		display: block;
+		max-width: 100%;
+		line-height: 1.4rem;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
 	}
 }
 
@@ -585,6 +675,10 @@ textarea.form_control {
 		flex: 1;
 		max-width: calc(100% - 10.6rem);
 		border-right: 1px solid #D2EEFF;
+
+		&.b_none {
+			border-right: 0;
+		}
 	}
 
 	.form_row {
@@ -620,12 +714,39 @@ textarea.form_control {
 		height: 4rem;
 	}
 
+	.check_item {
+		input {
+			+label {
+				color: $black;
+				font-weight: 500;
+				font-size: 1.5rem;
+
+				&:before {
+					margin-top: -.25rem;
+				}
+			}
+		}
+	}
+
 	.search_btn {
 		display: flex;
 		flex: 0 0 auto;
 		gap: 1rem;
 		height: 100%;
 		padding-left: 2rem;
+	}
+
+	.search_chk {
+		flex: 0 0 auto;
+		margin-left: auto;
+
+		.check_item {
+			input {
+				+label {
+					font-size: 1.5rem;
+				}
+			}
+		}
 	}
 
 	.btn_search {
